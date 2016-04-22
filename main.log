@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.21)  22 APR 2016 15:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.21)  22 APR 2016 17:26
 entering extended mode
 **./main.tex
 (main.tex
@@ -414,129 +414,27 @@ LaTeX Info: Redefining \addtolength on input line 81.
 )
 \c@@todonotes@numberoftodonotes=\count116
 )
-\@indexfile=\write4
-\openout4 = `main.idx'.
 
+! LaTeX Error: File `enumitem.sty' not found.
 
-Writing index file main.idx
-(main.aux
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: sty)
 
-LaTeX Warning: Label `fig:shipforces' multiply defined.
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.7 \graphicspath
+                 {{./images/}}
+*** (cannot \read from terminal in nonstop modes)
 
-)
-\openout1 = `main.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count117
-\scratchdimen=\dimen160
-\scratchbox=\box37
-\nofMPsegments=\count118
-\nofMParguments=\count119
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count120
-\MPscratchDim=\dimen161
-\MPnumerator=\count121
-\makeMPintoPDFobject=\count122
-\everyMPtoPDFconversion=\toks30
-)
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: End \AtBeginDocument code.
- ABD: EveryShipout initializing macros
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 14.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 14.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 14.
- [1
-
-{C:/Users/mahesh.nayak/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (int
-roduction.tex
-Chapter 1.
-) (literaturesurvey.tex) (foundation.tex [1
-
-]
-Chapter 2.
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-<./images/northseaoilandgasmap.jpg, id=15, 402.50375pt x 541.02126pt>
-File: ./images/northseaoilandgasmap.jpg Graphic file (type jpg)
-
-<use ./images/northseaoilandgasmap.jpg>
-Package pdftex.def Info: ./images/northseaoilandgasmap.jpg used on input line 2
-5.
-(pdftex.def)             Requested size: 322.00343pt x 432.81758pt.
- [2
-
-] [3 <./images/northseaoilandgasmap.jpg>] <./images/osvbig.jpg, id=22, 286.0687
-6pt x 177.66376pt>
-File: ./images/osvbig.jpg Graphic file (type jpg)
-
-<use ./images/osvbig.jpg>
-Package pdftex.def Info: ./images/osvbig.jpg used on input line 49.
-(pdftex.def)             Requested size: 286.06805pt x 177.66331pt.
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no ™ in font cmr10!
-
-<./images/dynamic-positioning.jpg, id=23, 612.2875pt x 361.35pt>
-File: ./images/dynamic-positioning.jpg Graphic file (type jpg)
-
-<use ./images/dynamic-positioning.jpg>
-Package pdftex.def Info: ./images/dynamic-positioning.jpg used on input line 57
-.
-(pdftex.def)             Requested size: 367.37534pt x 216.81168pt.
-
-Overfull \hbox (7.37534pt too wide) in paragraph at lines 57--58
- [][] 
- []
-
-
-Overfull \hbox (2.0pt too wide) in paragraph at lines 61--62
-[]
- []
-
-[4 <./images/osvbig.jpg>] [5 <./images/dynamic-positioning.jpg>])
-(specification.tex) (evaluation.tex) (main.bbl [6]) [7
-
-] (main.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+ 
 Here is how much of TeX's memory you used:
- 13111 strings out of 493634
- 263211 string characters out of 3141293
- 294757 words of memory out of 3000000
- 16269 multiletter control sequences out of 15000+200000
- 8533 words of font info for 30 fonts, out of 3000000 for 9000
+ 12637 strings out of 493634
+ 255925 string characters out of 3141293
+ 287061 words of memory out of 3000000
+ 15841 multiletter control sequences out of 15000+200000
+ 3940 words of font info for 15 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 62i,9n,80p,1315b,831s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (8 pages, 189293 bytes).
-PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 62i,0n,56p,438b,86s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
