@@ -22,7 +22,7 @@ In vessel handling terminology, maneuvering refers to the task of controlling a 
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.8]{northseaoilandgasmap}
+	\includegraphics[scale=0.7]{northseaoilandgasmap}
 	\caption{Map of oil and gas fields in the North sea}
 	\todo[inline]{Get higher resolution picture}
 	\label{fig:northseamap}
@@ -82,6 +82,49 @@ The use of dp systems has been increasing over the years since its first incepti
 
 %From PID to Advanced Control The first DP systems introduced in the early 1960s used conventional PID controllers in cascade with low-pass and/or notch filters to suppress the first-order wave-induced motion components. From the mid-1970s, more advanced control techniques were proposed based on linear optimal control and Kalman filter theory. With improvements and increasing sophistication in vessel control, the marine industry can look forward to more advanced control features such as DP-assisted position mooring systems, automatic maneuvering in shallow water and harbor areas, formation sailing, and automatic collision avoidance. These applications open new possibilities for the expansion of functionality in DP systems.
 
+Dynamic positioning is an automated system that helps human operators with maneuvering operations. It offloads part of the human operator's decision making overhead in real-time. Using a mathematical model of the ship and, the forces acting on it, the DP system can control the vessel's thrusters to position it in a preset destination. Figure \ref{fig:dparchitecture} is a model of the functional components of a dynamic positioning system. 
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.25]{dparchitecture}
+	\caption{Model architecture of Dynamic Positioning systems}
+	\label{fig:dparchitecture}
+\end{figure}
 
 
+The system contains a \textit{controller} module that influences vessel movements by taking decisions on power allocation for individual vessel thrusters. It takes as input, weather information from wind sensors and current position information from position reference systems. Expected output is to position the vessel at a position and heading preset by the operator. After being initiated, the system determines the difference between current position and desired position. It then attempts to minimize this difference over time. This is done by firing appropriate thrusters into action, producing vessel movements in different directions. 
 
+Environmental forces acting on the vessel during the time though add to the complexity of this operation. The controller then needs to compensate for unpredictable environmental forces as it decides on allocations for individual thrusters.  While the system takes into account wind forces acting on the vessel measured using wind sensors, as shown in \ref{fig:shipforces}, a vessel's position is also affected by ocean currents and waves. Kalman filter is generally used to model the environmental forces. It is an algorithm that uses a series of measurements observed over time, containing statistical noise and other inaccuracies, and produces estimates of unknown variables by using Bayesian inference and estimating a joint probability distribution over the variables for each timeframe. While it tends to be more precise than algorithms based on a single measurement alone, it is a nevertheless a probability based system that produces estimate predictions of changes in environmental forces over time and some uncertainty in predictions can be expected. Although there do not exist rules specifying acceptance criteria for the positioning performance of DP systems, DNVGL guidelines state that "in moderate weather conditions and with a fully operational DP-system the vessel should generally be able to demonstrate position keeping accuracy with a 3 meter radius and ± 1° of heading." \citep{veritas2011dynamic} 
+
+\todo[inline]{write about accidents that occured. ekofisk etc}
+
+Figure \ref{fig:praxisdp} shows the interface of a typical DP system. A display monitor is used to show various information regarding the vessel and its control systems. Apart from the display, there exists input interface in the form of buttons. They are used to provide information to the system such as desired location and the mode in which it will be used. Modes here refer to the various types of automatic vessel operation that differ in the amount of automation involved. Some of the common modes of operation are listed below. 
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=1]{praxisdp}
+	\caption{Typical dynamic positioning console}
+	\label{fig:praxisdp}
+\end{figure}
+
+\begin{enumerate}
+
+\item \textbf{Joystick}: In this mode, the operator can control the vessel position and heading manually using a joystick. 
+\item \textbf{Auto heading}: In this mode, the vessel automatically maintains a preset heading. 
+\item \textbf{Auto position}: This mode automatically maintains the vessel's position and heading. 
+\item \textbf{Follow target}: Enables the vessel to automatically follow a moving target. 
+\item \textbf{Autopilot}: In this mode, the vessel steers automatically to follow a predefined course. 
+
+\end{enumerate}
+
+This is by no means an exhaustive list of DP modes. It can be noted that besides functionality, the modes listed above differ by the level of automation involved in the functionality.  The joystick mode offers the least amount of automation. In this mode, a single lever can be used to control all of the vessel's thrusters at the same time. A large vessel such as a platform supply vessel typically has two azimuth thrusters at the stern-end of the vessel and one at the bow-end. In addition, they also typically have tunnel bow thrusters that can be used to turn the vessel in place. While it is possible to control each of the thrusters individually from the bridge of the vessel for fine-grained control; the joystick mode encapsulates all the thrusters into one control. This allows the captain to control forward, reverse, steering and even sideways motion using just one lever.
+
+\missingfigure{insert layout of typical PSV thrusters}
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.25]{osvlayout}
+	\caption{Schematic diagram of the power and control network of a typical offshore supply vessel}
+	\label{fig:osvlayout}
+\end{figure}
+
+The safety of vessels world-wide can be said to have improved over the years, going by number of total losses occuring per year even though the number sea-faring vessels have been ever increasing. 
