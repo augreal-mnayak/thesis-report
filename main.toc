@@ -4,45 +4,45 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Foundation}{3}{chapter.2}
+\contentsline {chapter}{\numberline {2}Foundation}{2}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.0.1}Offshore Supply Operations}{5}{subsection.2.0.1}
+\contentsline {subsection}{\numberline {2.0.1}Offshore Supply Operations}{4}{subsection.2.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.0.1.1}Dynamic Positioning}{6}{subsubsection.2.0.1.1}
+\contentsline {subsubsection}{\numberline {2.0.1.1}Dynamic Positioning}{5}{subsubsection.2.0.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Dynamic Positioning Modes}{10}{section*.8}
+\contentsline {paragraph}{Dynamic Positioning Modes}{9}{section*.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.0.1.2}Manual Handling}{12}{subsubsection.2.0.1.2}
+\contentsline {subsubsection}{\numberline {2.0.1.2}Manual Handling}{11}{subsubsection.2.0.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Operational Demands}{12}{section.2.1}
+\contentsline {section}{\numberline {2.1}Operational Demands}{11}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Human Factors Knowledge}{13}{section.2.2}
+\contentsline {section}{\numberline {2.2}Human Factors Knowledge}{12}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Mode Errors}{13}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.1}Mode Errors}{12}{subsection.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Envisioned Technology}{14}{section.2.3}
+\contentsline {section}{\numberline {2.3}Envisioned Technology}{13}{section.2.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.1}Display Technology for Mixed Reality}{15}{subsection.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.3.1.1}Photorealism}{16}{subsubsection.2.3.1.1}
+\contentsline {subsubsection}{\numberline {2.3.1.1}Photorealism}{15}{subsubsection.2.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.3.1.2}Categories of Mixed Reality Display}{16}{subsubsection.2.3.1.2}
+\contentsline {subsubsection}{\numberline {2.3.1.2}Categories of Mixed Reality Display}{15}{subsubsection.2.3.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Optical See-Through Head-Mounted Display}{16}{section*.15}
+\contentsline {paragraph}{Optical See-Through Head-Mounted Display}{15}{section*.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Video See-Through Head-Mounted Display}{16}{section*.16}
+\contentsline {paragraph}{Video See-Through Head-Mounted Display}{15}{section*.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Spatial Augmented Reality}{16}{section*.17}
+\contentsline {paragraph}{Spatial Augmented Reality}{15}{section*.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}Ship Instrument Augmentation}{16}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.2}Ship Instrument Augmentation}{15}{subsection.2.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.3.2.1}Bridge Instrumentation}{16}{subsubsection.2.3.2.1}
+\contentsline {subsubsection}{\numberline {2.3.2.1}Bridge Instrumentation}{15}{subsubsection.2.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.3.2.2}Tracking Requirements}{16}{subsubsection.2.3.2.2}
+\contentsline {subsubsection}{\numberline {2.3.2.2}Tracking Requirements}{15}{subsubsection.2.3.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{In-out vs out-in tracking}{16}{section*.18}
+\contentsline {paragraph}{In-out vs out-in tracking}{15}{section*.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{Fiducial Markers}{16}{section*.19}
+\contentsline {paragraph}{Fiducial Markers}{17}{section*.20}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Specification}{19}{chapter.3}
 \defcounter {refsection}{0}\relax 
