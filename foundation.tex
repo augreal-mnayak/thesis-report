@@ -191,9 +191,9 @@ This section talks about creation of visual perception of mixed reality using di
 \centering
 \caption{Levels of photorealism}
 \label{tab:trainingoptions}
-\begin{tabular}{@{}p{2cm}p{10cm}@{}}
+\begin{tabular}{@{}P{2.5cm}p{10cm}@{}}
 \toprule
-\multicolumn{1}{c}{\textbf{Classification}} & \multicolumn{1}{p{10cm}}{\textbf{Reasoning}} \\ 
+\multicolumn{1}{P{2.5cm}}{\textbf{Classification}} & \multicolumn{1}{p{10cm}}{\textbf{Reasoning}} \\ 
 \hline
 High & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,partopsep=0pt,align=left,itemsep=0.05cm]
 \item Presentation of occlusion, a basic depth cue, is necessary to induce sense of depth in the augmented scene
@@ -244,18 +244,62 @@ Virtual reality is a specific type of mixed reality that is fast growing into th
 
 Optical see-through head-mounted displays are one of the basic choices available for mixed reality content display. In general, see-through displays allow the user to see the real world through the display system. These were first developed for pilots of military aircraft for applications such as being able to see-through to firing targets while still looking out from the aircraft. The concept of see-through display is making way into consumer markets, with head up displays used in cars being one of the more popular uses. Such display systems can be made mobile with users when worn by them on the head so as to directly influence their view of the outside world. 
 
-Optical see-through head-mounted displays (OST) are display systems that exploit the transparency of glass material to provide unobstructed views of the outside world, and display digital content on the same surface simultaneously. As can be seen from \todo[inline]{ref fig:opticalseethrough}, OST displays use optical combiners to combine light from the real world with that of the digital content. Optical combiners usually reduce the amount of light from real world. Combiners act like half-silvered mirrors to be able to reflect light from monitors into user's eyes. Theoretically, this display system can provide undistorted view of the real world (apart from slight obstructions caused by the frame itself). As a downside, it also affects the display of digital content adversely, making virtual objects appear semi-transparent and 'ghostlike'.
+Optical see-through head-mounted displays (OST) are display systems that exploit the transparency of glass material to provide unobstructed views of the outside world, and display digital content on the same surface simultaneously. As figure \ref{fig:opticalseethrough} shows, OST displays use optical combiners to combine light from the real world with that of the digital content. Optical combiners usually reduce the amount of light from real world. Combiners act like half-silvered mirrors to be able to reflect light from monitors into user's eyes. Theoretically, this display system can provide undistorted view of the real world (apart from slight obstructions caused by the frame itself). As a downside, it also affects the display of digital content adversely, making virtual objects appear semi-transparent and 'ghostlike'.
 
-
-
-\todo{pros}
-Provides real-world views with less distortion compared to video see-through.
-
-\todo{cons}
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{opticalseethrough}
+	\caption{Schematic diagram of optical see through display (Source: \cite{azuma1997survey})}
+	\label{fig:opticalseethrough}
+\end{figure}
 
 \paragraph{Video See-Through Head-Mounted Display}
 
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{videoseethrough}
+	\caption{Schematic diagram of video see through display (Source: \cite{azuma1997survey})}
+	\label{fig:videoseethrough}
+\end{figure}
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[]
+\centering
+\caption{Comparison of see-through head-mounted displays}
+\label{tab:comparehmds}
+\begin{tabular}{@{}p{3.5cm}|P{4.5cm}|P{4.5cm}@{}}
+\toprule
+                                           & \multicolumn{1}{P{4cm}|}{\textbf{Optical see-through}}                          & \multicolumn{1}{P{4cm}|}{\textbf{Video see-through}} \\ \midrule
+Simplicity                                 & Only one stream to process (virtual images)                            & Two streams to process (camera feed + virtual images)                                                         \\
+\hline
+%\todo{add comparison of calibration and registration}
+%Calibration                                & Need to calibrate for user's unique facial geometry and facial acuity. & Availability of single digital composite of real and virtual images allows use of computer vision techniques. \\
+Quality of real world view                 & Largely undistorted                                                    & Camera and display dependent                                                                                   \\
+\hline
+Time lag of real world view                & 0ms                                                                    & \textgreater 16ms                                                                                              \\ 
+\hline
+Resolution                                 & Partially display dependent                                            & Fully Camera and display dependent                                                                             \\
+\hline
+Peripheral field of view (horizontal)      & 180 degrees                                                            & 110 degrees                                                                                                   \\
+\hline
+Digital display field of view (horizontal) & 20-40 degrees                                                          & \textgreater 90 degrees                                                                                        \\
+\hline
+Focus and contrast                         & Hard to blend virtual object into real scene                           & Less severe contrast issues due to limited dynamic response of cameras                                        \\
+\hline
+Occlusion                                  & Challenging to achieve full occlusion									& Occlusion is possible due to full control over displayed content \\ \bottomrule 
+\end{tabular}
+\end{table}
+
 \paragraph{Spatial Augmented Reality}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{monitorseethrough}
+	\caption{Schematic diagram of monitor see through display (Source: \cite{azuma1997survey})}
+	\label{fig:monitorseethrough}
+\end{figure}
 
 \subsection{Ship Instrument Augmentation}
 
