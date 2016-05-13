@@ -171,7 +171,7 @@ It is advised to avoid the possibility of mode errors when possible (citation ne
 
 An important choice in the design of a new human-computer interface is the technology used to build prototypes, and eventually the end product. For example, devices like keyboard, mouse and trackpad have acted as the standard input interface for personal computers for over 2 decades now, while computer monitors in the form of CRT, LCD and TFT displays have formed the output interface. Not unlike television monitors, computer monitors were initially used for purposes of data processing before being used for entertainment purposes such as gaming and media streaming. With the evolution of computing technology from large machines driven by punch cards and that filled up entire rooms to the personal computer form has coincided with their ubiquitous use in the modern world influencing the manner in which most office jobs are carried out today. 
 
-Computers had a significant impact on the maritime industry. Where naval architecture was traditionally a craft with little scientific information to back designs, modern computers enabled computing power to be leveraged to predict performance. Modern ship designs make use of tools that have been developed to assess static and dynamic stability, water resistance, for hull development and structural analysis. Among other uses, maritime industry found use for computers as devices that could be used for the simulation of movements of vessels on sea. In a gaming-like use case, computers are used to run ship simulation software for educational purposes. These programs can be used to control virtual ships in virtual marine environments. Some setups involve actual bridge equipment to input commands to the program, making the experience more real-like. An array of monitors are used for display. Backed by computer graphics and models of sea, vessel and other objects, the simulation software is supposed to create the perception of being inside a real vessel. It is now standard practice to undergo training using simulators in the maritime industry. Figure \ref{fig:vstepdpsim} shows the a typical dynamic positioning simulator ready for operation. 
+Computers had a significant impact on the maritime industry. Where naval architecture was traditionally a craft with little scientific information to back designs, modern computers enabled computing power to be leveraged to predict performance. Modern ship designs make use of tools that have been developed to assess static and dynamic stability, water resistance, for hull development and structural analysis. Among other uses, maritime industry found use for computers as devices that could be used for the simulation of movements of vessels on sea. In a gaming-like use case, computers are used to run ship simulation software for educational purposes. These programs can be used to control virtual ships in virtual marine environments. Some setups involve actual bridge equipment to input commands to the program, making the experience more real-like. An array of monitors are used for display. Backed by computer graphics and models of sea, vessel and other objects, the simulation software is supposed to create the perception of being inside a real vessel. It is now standard practice to undergo training using simulators in the maritime industry. Figure \ref{fig:vstepdpsim} shows the setup of a typical dynamic positioning simulator. 
 
 
 \begin{figure}
@@ -182,24 +182,30 @@ Computers had a significant impact on the maritime industry. Where naval archite
 \end{figure}
 
 
-\subsection{Display Technology for Mixed Reality}
+\subsection{Display Technology for Augmented Reality}
+\todo{state conclusion here (going to use optical see through}
+This section talks about display technology that can be used to create augmented reality applications.%creation of visual perception of mixed reality using digital display technology.
+It briefly describes technological options available for augmented reality applications from the point of view of creating the visual perception that is part of the augmented reality. Three abstract ideas of mixed reality displays are considered, namely, optical see-through, video see-through head-mounted displays and, spatial augmented reality. Having been conceived in the 1980s, military and medical visualization contexts, these options for mixed reality displays were first catalogued in a landmark survey paper on augmented reality by Ronald Azuma \cite{azuma1997survey}. This paper weighs the utility of these displays in the ship handling training context.  
 
-This section talks about creation of visual perception of mixed reality using digital display technology. 
+\subsubsection{Background of Augmented Reality}
+Mixed reality refers to the merging of virtual and real worlds in which physical and digital objects co-exist and interact in real time. In the field of mixed reality, some distinctions have been made between various applications based on the amount of virtual content in the mix. A continuum has been drawn characterising different mixed reality environments as shown in figure \ref{fig:mixedrealitycontinuum}. Completely real and completely virtual environments bring up extreme ends of the continuum, with different levels of virtuality in between. 
 
-
-\subsubsection{Categories of Mixed Reality Display}
-%considers the relevance of the technological options in the shiphandling training context
-This section describes technological options available for mixed reality displays. Three abstract ideas of mixed reality displays are considered, namely, optical see-through and video see-through head-mounted displays and, spatial augmented reality. Having been conceived in the 1980s, military and medical visualization contexts, these options for mixed reality displays were first catalogued in a landmark survey paper on augmented reality by Ronald Azuma \cite{azuma1997survey}. This paper weighs the utility of these displays in the ship handling training context. 
-
-Virtual reality is a specific type of mixed reality that is fast growing into the consumer market featuring entirely digital visuals and virtual environments. But mixed reality in general refers to the merging of virtual and real worlds in which physical and digital objects co-exist and possibly interact in real time.  In the field of mixed reality, some distinctions have been made between various applications based on the amount of virtual content in the mix. A continuum has been drawn characterising different mixed reality environments as shown in figure \ref{fig:mixedrealitycontinuum}. Completely real and completely virtual environments bring up extreme ends of the continuum, with different levels of virtuality in between. No clear distinctions are made between points in the continuum. One particular construct, augmented reality, has been gaining popularity over the years. Augmented reality refers to systems that feature predominantly real environments whose perception maybe augmented with information not readily available to the user (figure \ref{fig:augreal} for example, shows a map overlay on top of the camera view of a street). Further, some factors have been identified that help distinguish between different mixed reality systems: extent of world knowledge (whether the augmentation takes place in a modeled world or not), reproduction fidelity (quality of display of the real/virtual objects) and extent of presence metaphor (extent to which user feels they are present in the displayed scene themselves). A detailed description of mixed reality displays and differences in their characteristics can be found in \cite{milgram1995augmented}. 
-
- 
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{mixedrealitycontinuum}
-	\caption{Mixed Reality Continuum \cite{milgram1995augmented}}
+	\caption{Mixed Reality Continuum (Source: \cite{milgram1995augmented})}
 	\label{fig:mixedrealitycontinuum}
 \end{figure}
+
+Augmented reality has been defined by \textcite{azuma1997survey} as having the following three characteristics: 
+
+\begin{enumerate}
+\item Combines real and virtual 
+\item Is interactive in real time
+\item Is registered in three dimensions
+\end{enumerate} 
+
+Virtual reality has been gaining popularity in the consumer market in recent years. It is a specific type of mixed reality featuring entirely digital visuals and virtual environments. No clear distinctions are made between points in the continuum. One particular construct, augmented reality, has been gaining popularity over the years. Augmented reality refers to systems that feature predominantly real environments whose perception maybe augmented with information not readily available to the user (figure \ref{fig:augreal} for example, shows a map overlay on top of the camera view of a street). Further, some factors have been identified that help distinguish between different mixed reality systems: extent of world knowledge (whether the augmentation takes place in a modeled world or not), reproduction fidelity (quality of display of the real/virtual objects) and extent of presence metaphor (extent to which user feels they are present in the displayed scene themselves). A detailed description of mixed reality displays and differences in their characteristics can be found in \cite{milgram1995augmented}. 
 
 \begin{figure}
 	\centering
@@ -274,7 +280,11 @@ Occlusion                                  & Challenging to achieve full occlusi
 \end{tabular}
 \end{table}
 
-\paragraph{Spatial Augmented Reality}
+The display technologies considered so far have been applicable for creation of mixed reality for individual users. These systems do not scale easily to groups of users needing to experience the same mixed reality. For example, in the mixed reality ship handling training method that is being conceived in this project, it is required that at least two people experience the same scenario, i.e. the trainee and a trainer (experience ship handler). Apart from the trainee who needs to view the virtual object/s for training purposes, the trainer also needs to see the same in order to evaluate trainee performance. Collaborative design such as for architecture and modeling is another use case multiple users needing to experience the same mixed reality. 
+
+\myparagraph{Spatial Augmented Reality}
+
+Spatial augmented reality refers to the concept of adding digital content to a certain large space without the use of special display devices such head-mounted display, which still adhering to the basic requirements of augmented reality outlined in section \todo{list basic requirements of AR and reference it here}. Figure \ref{fig:monitorseethrough} shows a concept of monitor-based spatial augmented reality. In this setup, the user views the mixed reality on one or more monitors in front of the user which display a combination of virtual and real world images captured by video camera. This is similar to the CAVE \cite{cruz1993surround} concept for virtual reality. CAVE (CAVE automatic virtual environment) seeks to immerse the user in a 3D virtual environment created using rear/front facing projectors lighting up projection screens in 3 dimensions. Although originally designed for virtual reality  experience, the concept can be adapted for augmented reality. Advances in projection technology make it possible to have projections on transparent screens \cite{peterson2006human}. 
 
 \begin{figure}
 	\centering
@@ -282,6 +292,8 @@ Occlusion                                  & Challenging to achieve full occlusi
 	\caption{Schematic diagram of monitor see through display (Source: \cite{azuma1997survey})}
 	\label{fig:monitorseethrough}
 \end{figure}
+
+In considering technological options in the design of mixed reality systems, SAR is a useful option due to the ability to influence the reality of multiple users at once. On the downside, it places a premium on mobility. As opposed to head-mounted displays, SAR relies on projectors to create the views necessary for the mixed reality illusion. Projector based display systems are custom solutions that need to be designed for the specific environment in consideration. Ships come in a variety of shapes and sizes, and so do their bridge rooms. Using a projector-based display system for the the mixed reality training system being considered would then require a considerable amount of time to tailor the display system to individual ships. Besides, some modification of the ship bridge room is involved such as placing projectors at the appropriate locations and turning bridge windows in to projection screens onto which virtual objects can be projected.
 
 \subsubsection{Photorealism}
 
