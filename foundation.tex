@@ -185,39 +185,7 @@ Computers had a significant impact on the maritime industry. Where naval archite
 \subsection{Display Technology for Mixed Reality}
 
 This section talks about creation of visual perception of mixed reality using digital display technology. 
-\subsubsection{Photorealism}
 
-\begin{table}[h]
-\centering
-\caption{Levels of photorealism}
-\label{tab:trainingoptions}
-\begin{tabular}{@{}P{2.5cm}p{10cm}@{}}
-\toprule
-\multicolumn{1}{P{2.5cm}}{\textbf{Classification}} & \multicolumn{1}{p{10cm}}{\textbf{Reasoning}} \\ 
-\hline
-High & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,partopsep=0pt,align=left,itemsep=0.05cm]
-\item Presentation of occlusion, a basic depth cue, is necessary to induce sense of depth in the augmented scene
-\item Wide field of view is required to create illusion of large object being nearby.	
-\item  Virtual object is the main focus in the scene and, inconsistency in 3D view of augmented reality can hamper task performance from visual fatigue due to accomodation-vergence conflict.
-\end{enumerate}
-\vspace{-\baselineskip}\\
-\hline
-Medium & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,partopsep=0pt,align=left,itemsep=0.05cm]
-\item Occlusion is useful to induce depth in the scene, but some amount transparency can be tolerated.
-\item  Lack of wide field of view does not affect task performance. 
-\item  Inconsistency in 3D view does not easily amount to visual fatigue as virtual object is not the user's main object of focus in the augmented scene.
-\end{enumerate}
-\vspace{-\baselineskip}\\
-\hline
-Low & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,partopsep=0pt,align=left,itemsep=0.05cm]
-\item Depth cues in the scene are not necessary for purposes of the training.
-\item Wide field of view is not required for effective task performance.
-\item Inconsistency in 3D view does not easily amount to visual fatigue as virtual object is not the user's main object of focus in the augmented scene
-\end{enumerate}
-\vspace{-\baselineskip}\\
-\bottomrule
-\end{tabular}
-\end{table}
 
 \subsubsection{Categories of Mixed Reality Display}
 %considers the relevance of the technological options in the shiphandling training context
@@ -240,11 +208,11 @@ Virtual reality is a specific type of mixed reality that is fast growing into th
 	\label{fig:augreal}
 \end{figure}
 
-\paragraph{Optical See-Through Head-Mounted Display}
 
-Optical see-through head-mounted displays are one of the basic choices available for mixed reality content display. In general, see-through displays allow the user to see the real world through the display system. These were first developed for pilots of military aircraft for applications such as being able to see-through to firing targets while still looking out from the aircraft. The concept of see-through display is making way into consumer markets, with head up displays used in cars being one of the more popular uses. Such display systems can be made mobile with users when worn by them on the head so as to directly influence their view of the outside world. 
+Optical see-through head-mounted displays are one of the two basic choices available for mixed reality content display along with video see-though head-mounted displays. In general, see-through displays allow the user to see the real world through a display system while also being able to seamlessly display digital content on it. These were first developed for military aircraft for applications such as fixing the target of ammunition on locations that could be seen through the aircraft. The concept of see-through display is also making way into consumer markets, with head up displays used in cars being one of the more popular uses. Such display systems can also be mobile with users wearing them on the head so as to directly influence their view of the outside world. These are called as head-mounted displays. The following sections describe optical and video see-through displays in turn. A comparison of the two technologies on various parameters is presented thereafter.
 
-Optical see-through head-mounted displays (OST) are display systems that exploit the transparency of glass material to provide unobstructed views of the outside world, and display digital content on the same surface simultaneously. As figure \ref{fig:opticalseethrough} shows, OST displays use optical combiners to combine light from the real world with that of the digital content. Optical combiners usually reduce the amount of light from real world. Combiners act like half-silvered mirrors to be able to reflect light from monitors into user's eyes. Theoretically, this display system can provide undistorted view of the real world (apart from slight obstructions caused by the frame itself). As a downside, it also affects the display of digital content adversely, making virtual objects appear semi-transparent and 'ghostlike'.
+\myparagraph{Optical See-Through Head-Mounted Display}
+Optical see-through head-mounted displays (OST) are display systems that exploit the transparency of glass material to provide unobstructed views of the outside world. By definition, they can also digital content on the same surface simultaneously. As figure \ref{fig:opticalseethrough} shows, OST displays use optical combiners to combine light from the real world with that of the digital content. Optical combiners usually reduce the amount of light from real world. Combiners act like half-silvered mirrors to be able to reflect light from monitors into user's eyes. Theoretically, this display system can provide undistorted view of the real world (apart from slight obstructions caused by the frame itself). As a downside, it also affects the display of digital content adversely, making virtual objects appear semi-transparent and 'ghostlike'.
 
 \begin{figure}
 	\centering
@@ -253,7 +221,10 @@ Optical see-through head-mounted displays (OST) are display systems that exploit
 	\label{fig:opticalseethrough}
 \end{figure}
 
-\paragraph{Video See-Through Head-Mounted Display}
+\myparagraph{Video See-Through Head-Mounted Display}
+Video see-through HMDs are similar to optical see-through HMDs in that they allow the combination of real world views with digital content. Differences between them stem from their source of real world view. As opposed to OST which provides a direct view of the environment, VST uses video feed from a camera in the HMD system to provide real world views. So, in addition to the head trackers and viewing monitors as in OST HMDs, VST HMDs require a camera appendage in the setup (see figure \ref{fig:videoseethrough}). This is because this type of HMDs block the wearer's external view in favor of better immersion into the stereoscopic view provided by the system. A video camera mounted on the exterior of such an HMD then enables the outside view to be incorporated back into the content being displayed \todo[inline]{consider revision}. 
+
+Driven by interest from the gaming community, and virtual reality applications in general, closed-view HMDs have seen more development as of this writing. Low cost HMDs are available in the consumer market, and can be used for 3D games and entertainment applications. With the addition of one or two cameras, these can be leveraged for mixed reality applications. Consequently, calibration of the camera's view to that of the user's eye position will have to be made \todo[inline]{citation needed}.
 
 \begin{figure}
 	\centering
@@ -262,9 +233,20 @@ Optical see-through head-mounted displays (OST) are display systems that exploit
 	\label{fig:videoseethrough}
 \end{figure}
 
+\subsubsection{Comparison of see-through head-mounted displays}
+This section provides a comparison of optical and video see-through HMDs based on parameters thought by this author to be relevant in this context. For a thorough review and comparison between these two, check out.. \todo[inline]{citation needed}.
 
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
+\begin{enumerate}
+\item \textit{Simplicity}: In mixed reality applications, there is a need to see the external world besides virtual images being displayed in the HMDs. Optical see-through systems meet this requirement naturally from employing transparent displays which do not interfere with the external view. Video see-through systems on the otherhand, use a camera to capture the external view. The camera then seeks to perform the role of human vision, one of the most complicated sensory systems in the universe, the various functions of which are either not built into or not yet achievable using consumer grade cameras. For example, the resolution of the entire view (real + virtual) is limited to that of the display device in case of VST. This constraint is also present in optical see-through devices, with a crucial difference that it is only applicable to virtual parts of the scene. 
+
+\item \textit{Lag}: A persistent problem with interactive computer graphics is that of time delay (lag) between expectation of the appearance of a scene and it's actual appearance. For example, in an OST system, there will be near zero lag in viewing real scene as it is viewed directly by the user. Whereas, the display of any virtual objects can be a source of lag. The system first needs to decide whether to display virtual objects based on viewing direction and orientation and, also calculate appropriate projection of the virtual object if it needs to be displayed indeed. Finally, there will be a small delay in rendering the images itself. 
+
+In case of video see-through systems, additional lag is present from having to digitize video stream of the real world. In a display that refreshes at 60Hz, the time that elapses between display of one frame and another is 16.67ms. Hence there will be a minimum of 16.67ms delay in displaying the external view recorded by a camera, discounting the time taken to digitize the camera view \todo[inline]{what do you mean by digitize??}. According to \parencite{ellis1997factors}, for close range tasks, one millisecond of delay causes one millimeter of error
+
+An advantage of VST over OST is that the higher degree of control over display streams (real and virtual) in video see-through makes it possible to avoid the problem of temporal mismatch due to delay in virtual images by delaying real view as well. 
+ 
+\end{enumerate}
+
 \begin{table}[]
 \centering
 \caption{Comparison of see-through head-mounted displays}
@@ -300,6 +282,40 @@ Occlusion                                  & Challenging to achieve full occlusi
 	\caption{Schematic diagram of monitor see through display (Source: \cite{azuma1997survey})}
 	\label{fig:monitorseethrough}
 \end{figure}
+
+\subsubsection{Photorealism}
+
+\begin{table}[h]
+\centering
+\caption{Levels of photorealism}
+\label{tab:trainingoptions}
+\begin{tabular}{@{}P{2.5cm}p{10cm}@{}}
+\toprule
+\multicolumn{1}{P{2.5cm}}{\textbf{Classification}} & \multicolumn{1}{p{10cm}}{\textbf{Reasoning}} \\ 
+\hline
+High & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,partopsep=0pt,align=left,itemsep=0.05cm]
+\item Presentation of occlusion, a basic depth cue, is necessary to induce sense of depth in the augmented scene
+\item Wide field of view is required to create illusion of large object being nearby.	
+\item  Virtual object is the main focus in the scene and, inconsistency in 3D view of augmented reality can hamper task performance from visual fatigue due to accomodation-vergence conflict.
+\end{enumerate}
+\vspace{-\baselineskip}\\
+\hline
+Medium & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,partopsep=0pt,align=left,itemsep=0.05cm]
+\item Occlusion is useful to induce depth in the scene, but some amount transparency can be tolerated.
+\item  Lack of wide field of view does not affect task performance. 
+\item  Inconsistency in 3D view does not easily amount to visual fatigue as virtual object is not the user's main object of focus in the augmented scene.
+\end{enumerate}
+\vspace{-\baselineskip}\\
+\hline
+Low & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,partopsep=0pt,align=left,itemsep=0.05cm]
+\item Depth cues in the scene are not necessary for purposes of the training.
+\item Wide field of view is not required for effective task performance.
+\item Inconsistency in 3D view does not easily amount to visual fatigue as virtual object is not the user's main object of focus in the augmented scene
+\end{enumerate}
+\vspace{-\baselineskip}\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \subsection{Ship Instrument Augmentation}
 
