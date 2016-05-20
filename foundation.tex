@@ -1,22 +1,23 @@
 \chapter{Foundation}
 
-\todo[inline]{chapter overview}
+This chapter covers results of the domain analysis that was used to derive requirements for the scenario based training being developed in this project. The first section is an introduction that describes ship handling in general before delving into details of a specific case - the offshore energy industry where special requirements led to the development of increased automation and specialized equipment. The following three sections conform to the sce method. Section \ref{sec:operationaldemands} titled operational demands describe the skills/knowledge required for safe execution of ship handling operations. According to the sce method, the design of a technological solution takes into account human factors that affect the interaction between users and the system. In keeping with the method, section \ref{sec:humanfactors} titled human factors knowledge describes mode errors - a type of error arising from operation of state-dependent systems out of state. Finally, section \ref{sec:envisionedtech} describes technological possibilities and options available to implement the augmented training method envisioned here. 
 
 \section{Ship Handling}
 
 Ship handling is the task of controlling a vessel’s movement with accuracy and precision using its propulsion and navigation systems while also taking into account environmental forces such as wind, waves and current acting on the vessel \parencite{wiki:seamanship}. Vessels move in a variety of marine environments. Starting from shallow waters of harbour ports a vessel might navigate vast oceans to a port in another harbour across the ocean. Vessels also navigate inland waterways such as rivers, canals, backwaters and creeks. More recently, developments in offshore wind farming and the oil and gas industry have necessitated regular and frequent visits to offshore structures located on continental shelves for construction and maintenance activities. 
 
-\todo[inline]{Provide overview - distinguish between maneuvering and navigation and say maneuvering is skilled job. }
+Given the different situations in which a ship is handled, a distinction is made between vessel handling in restricted spaces as opposed to navigating the open seas. Maneuvering typically refers to the handling of ships in confined spaces and at low speeds; requiring accuracy and precision. Navigation occurs in open waters where there is more room for movement, making it a comparatively easier task. Over the years, some amount of automation has seeped into marine technology that enable these tasks such as autopilot for navigation and dynamic positioning for maneuvering. The training method developed here is aimed at learning maneuvering, a skilled task that involves safety risks by nature of its activities. The following sections describe the challenges of maneuvering and its high relevance in the offshore oil industry. 
 
 \subsection{Maneuvering}
 
 
-Vessel handling at low speeds has been difficult on marine vessels historically. From a technical point of view, the working mechanism of past rudder systems made it difficult to turn vessels 'in place'. Maneuvering a large vessel at low speed is often a challenging operation even from the perspective of a human operator. Many factors affect the precise handling of a given vessel such as it's size, power, thruster configuration, onboard bridge equipment, etc. Further, the vessel's handling characteristics are subject to environmental conditions such as wind, current, and waves. Besides, low speed maneuvering often occurs in close proximity to man-made constructions such as docks, offshore structures and other ships. The potentially destructive consequences of collision risks in such scenarios makes it a stressful operation, further amplifying the challenge. 
+Vessel handling at low speeds has been difficult on marine vessels historically \cite{brittanica:ship}. From a technical point of view, the working mechanism of past rudder systems made it difficult to turn vessels 'in place'. Maneuvering a large vessel at low speed is often a challenging operation even from the perspective of a human operator. Many factors affect the precise handling of a given vessel such as it's size, power, thruster configuration, onboard bridge equipment, etc. Further, the vessel's handling characteristics are subject to environmental conditions such as wind, current, and waves. Besides, low speed maneuvering often occurs in close proximity to man-made constructions such as docks, offshore structures and other ships. The potentially destructive consequences of collision risks in such scenarios makes it a stressful operation, further amplifying the challenge. 
 
 A method for objective evaluation of ship handling difficulties in restricted maneuvering area, in areas of traffic congestion is presented in \parencite{inoue2000evaluation}. Examples of difficult maneuvering operations include approaching a harbour, berthing in a port, sailing side-by-side another vessel, approaching and stationing close to an oil platform, etc. An often recurring sequence is that of  port-bound vessel heading to its berthing location in the harbour. Having entered pilot waters from seaward, a vessel's course needs to be controlled accurately to ensure safe passage through channels, bridges, and locks; avoiding collisions with other vessels at the same time. Safety risks involved in such tasks make it a stressful operation. Mistakes have high associated costs, possibly leading to lost lives and damage to expensive constructions.
 
 \subsection{Offshore Supply Operations}
-A special application of ship handling skill is on-board offshore supply vessels. These are vessels that are used in support of exploration and production of offshore mineral or energy resources. Figure \ref{fig:northseamap} shows some prominent oil fields in the North sea. 
+
+A special application of ship handling skill is on-board offshore supply vessels. These are vessels that are used in support of exploration and production of offshore mineral or energy resources located in continental shelves around the world. For example, figure \ref{fig:northseamap} shows some prominent oil fields in the North sea. 
 \begin{figure}[h]
 	\centering
 	\caption{Prominent oil and gas fields in the North sea}
@@ -25,9 +26,7 @@ A special application of ship handling skill is on-board offshore supply vessels
 	\label{fig:northseamap}
 	\hbox{\small Source: \thinspace{refer footnote\protect\footnotemark}}
 \end{figure}
-
 \footnotetext{U.S. Energy Information Administration, United Kingdom Department of Energy and Climate Change, Norwegian Petroleum Directorate}
-
 Specific missions of offshore supply vessels include: 
 \begin{itemize}
 \item seismic survey to locate potential oil and gas fields
@@ -38,27 +37,27 @@ Specific missions of offshore supply vessels include:
 \end{itemize}
 
 
-Maneuvering plays an important role in platform supply vessels. These vessels need to approach and be stationed close to offshore oil platforms on a regular basis. They transport supplies such as fuel, water and chemicals to the facilities and bring back disposables for proper recycling. 
+Maneuvering plays an important role in platform supply vessels. They transport supplies such as fuel, water and chemicals to the offshore facilities and bring back disposables for proper recycling. Hence, these vessels need to approach and be stationed close to platforms on a regular basis. Loading and unloading operations happen at the stern of a vessel and requires station keeping till the operation is complete. This requirement led to the development and subsequent popularity of dynamic positioning systems. These are automated systems that help with station keeping and other maneuvering operations. The following sections describe the dynamic positioning system, their conceptual working mechanism and modes of operation before making a case about the need for skilled manual maneuvering operators.
  
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=1.25]{osvbig}
-	\caption{Offshore supply vessels in operation}
-	\label{fig:osvbig}
-\end{figure}
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[scale=1.25]{osvbig}
+%	\caption{Offshore supply vessels in operation}
+%	\label{fig:osvbig}
+%\end{figure}
 
 \subsubsection{Dynamic Positioning System}
 
-A typical loading operation happens at the stern of the ship. requires station keeping.
-This requirement led to the development and subsequent popularity of dynamic positioning systems. Dynamic positioning (DP) is a computer-controlled system that maintains position and heading of a vessel automatically by using its propellers and thrusters. Information from position reference sensors that provide the vessel’s position and heading, along with information from wind sensors, motion sensors and gyrocompasses on the vessel are used by the system. The information is supplied as input to a program that calculates the changes in position/heading required to bring the vessel a preset location and, activates the vessel’s thrusters as necessary.
+ Dynamic positioning (DP) is a computer-controlled system that maintains position and heading of a vessel automatically by using its propellers and thrusters. Information from position reference sensors that provide the vessel’s position and heading, along with information from wind sensors, motion sensors and gyrocompasses on the vessel are used by the system. The information is supplied as input to a program that calculates the changes in position/heading required to bring the vessel a preset location and, activates the vessel’s thrusters as necessary.
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.60]{dynamic-positioning}
 	\caption{Forces acting on a ship and its possible movements}
+	\includegraphics[scale=0.60]{dynamic-positioning}
+	\hbox{\small Source: \thinspace{kongsberg.com}}
 	\label{fig:shipforces}
 \end{figure}
-\todo[inline]{make own picture with legend of forces}
+
 %Write about the popularity of Dp systems, its advantages and disadvantages. Mention increasing automation and the need for manual control ability. 
 
 The use of dp systems has been increasing over the years since its first inception in 1960s. There are well over 2000 DP vessels in operation today \cite{sorensen2011survey}. From the early days of the technology where main focus areas of research were accurate position measurement and control system technologies used, research has now moved on to more specialized problems such as optimizing dp systems for energy efficiency. With increasing popularity of DP systems and increased use of sophisticated technology onboard ships, the marine industry can expect more advanced automation in vessel control over the years. Future systems could be enabled with features such as automatic maneuvering in shallow water and harbor areas, formation sailing, and automatic collision avoidance.
@@ -127,7 +126,7 @@ Going by number of total losses occuring per year (refer figure \ref{fig:lossesb
 \end{figure}
 
 \section{Operational Demands}
-
+\label{sec:operationaldemands}
 An intuitive understanding of the vessel’s handling is required to manually manoeuvre the vessel. Different vessels exhibit different handling behavior depending on their propulsion technology, steering controls, and, dynamics of the particular vessel, owing to its design. These factors have a combined effect on the handling behavior of the vessel, that is unique to the vessel, or the vessel type in general. Besides, vessels also differ in the way they respond to various weather conditions. 
 Gaining a high level of intuitive understanding of the vessel’s motion dynamics comes with extensive practice. A manoeuvre training system should then enable maneuvering practice on the real vessel in real situations.
 
@@ -145,6 +144,7 @@ Figure \ref{fig:nidpcertification} shows the certification process required to b
 \end{figure} 
 
 \section{Human Factors Knowledge}
+\label{sec:humanfactors}
 \subsection{Mode Errors}
 In context of interface design, mode errors are the errors that occur when a user operates an interface in a manner that is appropriate to a different state of the system than the one it actually is in. When the user forgets the actual state and performs an action appropriate to a different state, the system response is unexpected and usually undesired. A common example of mode errors is the undesired input of capitalised letters on a computer due to caps lock, or the inability to enter numbers using the number pad due to numlock. 
 
@@ -171,7 +171,7 @@ It is advised to avoid the possibility of mode errors when possible (citation ne
 \end{figure}
 
 \section{Envisioned Technology}
-
+\label{sec:envisionedtech}
 An important choice in the design of a new human-computer interface is the technology used to build prototypes, and eventually the end product. For example, devices like keyboard, mouse and trackpad have acted as the standard input interface for personal computers for over 2 decades now, while computer monitors in the form of CRT, LCD and TFT displays have formed the output interface. Not unlike television monitors, computer monitors were initially used for purposes of data processing before being used for entertainment purposes such as gaming and media streaming. With the evolution of computing technology from large machines driven by punch cards and that filled up entire rooms to the personal computer form has coincided with their ubiquitous use in the modern world influencing the manner in which most office jobs are carried out today. 
 
 Computers had a significant impact on the maritime industry. Where naval architecture was traditionally a craft with little scientific information to back designs, modern computers enabled computing power to be leveraged to predict performance. Modern ship designs make use of tools that have been developed to assess static and dynamic stability, water resistance, for hull development and structural analysis. Among other uses, maritime industry found use for computers as devices that could be used for the simulation of movements of vessels on sea. In a gaming-like use case, computers are used to run ship simulation software for educational purposes. These programs can be used to control virtual ships in virtual marine environments. Some setups involve actual bridge equipment to input commands to the program, making the experience more real-like. An array of monitors are used for display. Backed by computer graphics and models of sea, vessel and other objects, the simulation software is supposed to create the perception of being inside a real vessel. It is now standard practice to undergo training using simulators in the maritime industry. Figure \ref{fig:vstepdpsim} shows the setup of a typical dynamic positioning simulator. 
@@ -288,10 +288,11 @@ The display technologies considered so far have been applicable for creation of 
 
 \subsubsection{Spatial Augmented Reality}
 
-Spatial augmented reality refers the concept of augmenting real-world spaces (with digital content) without using special display devices such head-mounted display. As implied by the name, implementations must adhere to the basic requirements of augmented reality outlined in section \ref{sec:augreal}. \todo{insert section motivation, conclusion}
+Spatial augmented reality (SAR) refers to the concept of augmenting real-world spaces (with digital media) without the use of special devices such head-mounted display. As an AR technology, implementations of SAR must adhere to the basic requirements of augmented reality listed in section \ref{sec:augreal}. Along with HMDs, it forms another paradigm for the creation of mixed reality content. SAR offers unique benefits over HMDs such as obviating the need to wear special devices and possibly high resolution, wide field of view displays integrated into natural environments. Large field of view and higher resolution provides a stronger feeling of presence \parencite{lantz1996future}, allowing for better immersion and easier eye accommodation\footnote{refer to section \ref{sec:photorealism} for a discussion on photorealism}. On the downside, it suffers from setbacks such as having to set up expensive custom-made display configurations that require more space and hardware than standardized HMDS. 
 
+The lack of standardized solutions and the need to setup special hardware tailored to individual ships makes SAR an impractical solution for creation of AR onboard ships for maneuvering training purposes. A portable technological solution that enables mobility between vessels is desired. This allows for trainings to be conducted on various different vessels with minimal time and effort involved in setting up the augmented environment. Instead, the use of mobile AR devices such as HMDs means that trainees can carry individual AR devices onboard and vessels do not need to be docked for purposes of setting up the AR environment. Nevertheless, the concept is described in brief here for completeness. A detailed treatment of the topic of spatial augmented reality can be found in \cite{bimber2005spatial}.
 
-Figure \ref{fig:monitorseethrough} shows a concept of monitor-based spatial augmented reality. In this setup, the user views the mixed reality on one or more monitors in front of the user which display a combination of virtual and real world images captured by video camera. This is similar to the CAVE \cite{cruz1993surround} concept for virtual reality. CAVE (CAVE automatic virtual environment) seeks to immerse the user in a 3D virtual environment created using rear/front facing projectors lighting up projection screens in 3 dimensions. Although originally designed for virtual reality  experience, the concept can be adapted for augmented reality. Advances in projection technology make it possible to have projections on transparent screens \cite{peterson2006human}. 
+Figure \ref{fig:monitorseethrough} shows a concept of monitor-based spatial augmented reality. In this setup, the user views the mixed reality on one or more monitors in front of the user which display a combination of virtual and real world images captured by video camera. This is similar to the CAVE \parencite{cruz1993surround} concept for virtual reality. CAVE (CAVE automatic virtual environment) seeks to immerse the user in a 3D virtual environment created using rear/front facing projectors lighting up projection screens in 3 dimensions. Although originally designed for virtual reality experience, the concept can be adapted for augmented reality. Advances in projection technology make it possible to have projections on transparent screens \parencite{peterson2006human}. 
 
 \begin{figure}
 	\centering
@@ -300,9 +301,10 @@ Figure \ref{fig:monitorseethrough} shows a concept of monitor-based spatial augm
 	\label{fig:monitorseethrough}
 \end{figure}
 
-In considering technological options in the design of mixed reality systems, SAR is a useful option due to the ability to influence the reality of multiple users at once. On the downside, it places a premium on mobility. As opposed to head-mounted displays, SAR relies on projectors to create the views necessary for the mixed reality illusion. Projector based display systems are custom solutions that need to be designed for the specific environment in consideration. Ships come in a variety of shapes and sizes, and so do their bridge rooms. Using a projector-based display system for the the mixed reality training system being considered would then require a considerable amount of time to tailor the display system to individual ships. Besides, some modification of the ship bridge room is involved such as placing projectors at the appropriate locations and turning bridge windows in to projection screens onto which virtual objects can be projected.
+A discussion of display options for AR would be incomplete without spatial augmented reality. As opposed to head-mounted displays, SAR relies on projectors to create the views necessary for the perception of mixed reality. SAR may be just as effective as head-mounted displays in being able to create immersive mixed environments. A study on the use of large projection screen as an alternative to HMDs for virtual environment found no significant difference between the two for spatial cognition tasks \parencite{patrick2000using}. But projector-based display systems are custom solutions that need to be designed for the specific environment in consideration. Ships come in a variety of shapes and sizes, so do their bridge rooms. Setting up MR environments onboard different supply vessels would then involve considerable effort to tailor the display system for individual ships. Besides, some modification of the ship bridge room is involved such as placing projectors at the appropriate locations and turning bridge windows in to projection screens onto which virtual objects can be projected.
 
 \subsubsection{Photorealism}
+\label{sec:photorealism}
 
 \begin{table}[h]
 \centering
@@ -337,6 +339,8 @@ Low & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,partopsep=0pt,alig
 \end{table}
 
 \subsection{Ship Instrument Augmentation}
+
+Mixed reality displays described in the previous section form a part of enabling technologies for the mixed reality ship maneuvering training conceptualized in this research. HMDs for instance can help create visual perception of an offshore oil platform standing on the open sea. In other training scenarios they may be used to display tracks/lanes for navigational tracking or virtual ships on collision course/sailing side-by-side etc. Different artifacts may be displayed depending on training objectives and the perceptions that need to be created. Ships over the years though have evolved to be technically complex machines. The bridge room of a modern age vessel houses multiple instruments tracking different aspects of its reality. Therefore, the design of a mixed reality environment onboard a modern seafaring vessel should consider how virtual objects interact with various instruments in the bridge room so as to accurately correspond with the reality that is being visually perceived.  
 
 \subsubsection{Bridge Instrumentation}
 
