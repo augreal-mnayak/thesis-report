@@ -1,10 +1,8 @@
 \chapter{Foundation}
 
-This chapter covers results of the domain analysis that was used to derive requirements for a scenario-based ship maneuvering training method. Mixed reality is an emerging technology which can be used to display virtual objects merged with real world views. It is useful in certain job scenarios that require execution of complex tasks. A popular use case has been for the assembly and maintenance of equipment. Overlaying 3-D virtual guides on see-through images of actual equipment obviates the need to look away in order to refer to a manual. In the maritime sector, a study on the application of augmented reality found that 3-D virtual guides help users perform ship building and maintenance tasks in almost half the usual time \parencite{henderson2011exploring}. 
+This chapter covers results of the domain analysis that was used to derive requirements for a scenario-based ship maneuvering training method. The content explored in this chapter are relevant to answering the research question - what are the operational scenarios in which mixed reality training could be useful. In keeping with the sCE method, it covers operational demands, human factors and, technological options available for the design of this human-computer interface for maritime training. 
 
-Some applications that aid job performance by providing helpful contextual information on top of real-world views have been explored. Overlaying route waypoints, distance to next waypoint, local hazards, etc. allows the integration of various information that is used by the officer of the watch into one single augmented display. In poor visibility conditions, virtual rails on both sides of the ship help with steering. Buoys, fog signals, day beacons and other navigational aids can also be visually overlaid in low-visibility conditions to help with navigation. These applications show the use of augmented reality as aids for task execution, but little research has been done on it's use in training ship crew members. 
-
-This research explores the design of an 
+A survey of literature in this context brings up some studies of applications that aid job performance by providing helpful contextual information on top of real-world views. Overlaying route waypoints, distance to next waypoint, local hazards, etc. allows the integration of various information that is used by the officer of the watch into one single augmented display. In poor visibility conditions, virtual rails on both sides of the ship help with steering. Buoys, fog signals, day beacons and other navigational aids can also be visually overlaid in low-visibility conditions to help with navigation. These applications show the use of augmented reality as aids for task execution, but little research can be found on use in training ship crew members. 
 
 The first section is an introduction to ship handling in general, including a specific case - the offshore energy industry where unique requirements led to the development of increased automation and specialized equipment for ships. The following three sections are in accordance with the situated cognitive engineering research method. Section \ref{sec:operationaldemands} titled operational demands describe from an operator point-of-view, requirements for safe execution of ship handling operations. In designing a technological solution, the SCE method takes into account human factors that could affect interactions between users and the system being developed. Consequently, section \ref{sec:humanfactors} titled human factors knowledge describes mode errors - a type of error arising from operation of state-dependent systems out of state. Finally, section \ref{sec:envisionedtech} describes technological options available to implement the mixed reality training method that is envisioned.
 
@@ -17,7 +15,6 @@ A certain amount of automation has seeped into marine industry over the years. I
 The training method developed here is aimed at learning maneuvering. Besides being a skilled task, it also involves safety risks by nature of its activities. The next section describes challenges of maneuvering and its high relevance in the offshore oil industry. It is followed by a brief description of Dynamic Positioning Systems, the automation technology that assists with ship maneuvering tasks and its riders that drive the need for manual vessel handling skills in operators. 
 
 \subsection{Maneuvering}
-
 
 Vessel handling at low speeds has been difficult on marine vessels historically \cite{brittanica:ship}. From a technical point of view, the working mechanism of past rudder systems made it difficult to turn vessels 'in place'. Maneuvering a large vessel at low speed is often a challenging operation even from the perspective of a human operator. Many factors affect the precise handling of a given vessel such as it's size, power, thruster configuration, onboard bridge equipment, etc. Further, the vessel's handling characteristics are subject to environmental conditions such as wind, current, and waves. Besides, low speed maneuvering often occurs in close proximity to man-made constructions such as docks, offshore structures and other ships. The potentially destructive consequences of collision risks in such scenarios makes it a stressful operation, further amplifying the challenge of maneuvering.
 
@@ -44,7 +41,6 @@ Specific missions of offshore supply vessels include:
 \item safety standby for emergency response and rescue operations
 \end{itemize}
 
-
 Maneuvering plays an important role in platform supply vessels. They transport supplies such as fuel, water and chemicals to the offshore facilities and bring back disposables for proper recycling. Hence, these vessels need to approach and be stationed close to platforms on a regular basis. Loading and unloading operations happen at the stern of a vessel and requires station keeping till the operation is complete. This requirement led to the development and subsequent popularity of dynamic positioning systems. These are automated systems that help with station keeping and other maneuvering operations. The following sections describe the dynamic positioning system, their conceptual working mechanism and modes of operation before making a case about the need for skilled manual maneuvering operators.
  
 
@@ -62,7 +58,7 @@ Maneuvering plays an important role in platform supply vessels. They transport s
 
 %Write about the popularity of Dp systems, its advantages and disadvantages. Mention increasing automation and the need for manual control ability. 
 
-The use of dp systems has been increasing over the years since its first inception in 1960s. There are well over 2000 DP vessels in operation today \cite{sorensen2011survey}. From the early days of the technology where main focus areas of research were accurate position measurement and control system technologies used, research has now moved on to more specialized problems such as optimizing dp systems for energy efficiency. With increasing popularity of DP systems and increased use of sophisticated technology onboard ships, the marine industry can expect more advanced automation in vessel control over the years. Future systems could be enabled with features such as automatic maneuvering in shallow water and harbor areas, formation sailing, and automatic collision avoidance.
+The use of dp systems has been increasing over the years since its first inception in 1960s. There are well over 2000 DP vessels in operation today \cite{sorensen2011survey}. From early days of the technology where main focus areas of research were accurate position measurement and control system technologies used, research has now moved on to more specialized problems such as optimizing dp systems for energy efficiency. With increasing popularity of DP systems and increased use of sophisticated technology onboard ships, the marine industry can expect more advanced automation in vessel control over the years. Future systems could be enabled with features such as automatic maneuvering in shallow water and harbor areas, formation sailing, and automatic collision avoidance.
 
 %The popularity of DP systems has grown to a point where they are a component of medium to large sized vessels these days. 
 
@@ -89,12 +85,12 @@ Figure \ref{fig:praxisdp} shows the interface of a typical DP system. A display 
 \paragraph{Dynamic Positioning Modes}
 Dynamic positioning systems can be commonly operated in different modes. Modes define the type of automatic vessel operation, some of which differ in the amount of automation involved. Following are some common modes of dynamic positioning systems. 
 
-\begin{figure}
-	\centering
-	\includegraphics[scale=1]{praxisdp}
-	\caption{Typical dynamic positioning console}
-	\label{fig:praxisdp}
-\end{figure}
+%\begin{figure}
+%	\centering
+%	\includegraphics[scale=1]{praxisdp}
+%	\caption{Typical dynamic positioning console}
+%	\label{fig:praxisdp}
+%\end{figure}
 
 \begin{enumerate}
 
@@ -237,7 +233,7 @@ Figure \ref{fig:monitorseethrough} shows a concept of monitor-based spatial augm
 A discussion of display options for AR would be incomplete without spatial augmented reality. As opposed to head-mounted displays, SAR relies on projectors to create the views necessary for the perception of mixed reality. SAR may be just as effective as head-mounted displays in being able to create immersive mixed environments. A study on the use of large projection screen as an alternative to HMDs for virtual environment found no significant difference between the two for spatial cognition tasks \parencite{patrick2000using}. But projector-based display systems are custom solutions that need to be designed for the specific environment in consideration. Ships come in a variety of shapes and sizes, so do their bridge rooms. Setting up MR environments onboard different supply vessels would then involve considerable effort to tailor the display system for individual ships. Besides, some modification of the ship bridge room is involved such as placing projectors at the appropriate locations and turning bridge windows in to projection screens onto which virtual objects can be projected.
 
 \subsection{Comparison of Head-Mounted Displays}
-This section provides a comparison of optical and video see-through HMDs based on parameters thought by this author to be relevant in this context. For an in-depth review and comparison between these two, readers can refer to \cite{rolland1995comparison}.
+This section provides a comparison of optical and video see-through HMDs based on parameters thought to be relevant to this study. For an in-depth review and comparison between these two display types, readers can refer to \cite{rolland1995comparison}.
 
 \begin{enumerate}
 \item \textit{Simplicity}: In mixed reality applications, there is a need to see the external world besides virtual images being displayed in the HMDs. Optical see-through systems meet this requirement naturally from employing transparent displays which do not interfere with the external view. Video see-through systems on the other hand, use a camera to capture the external view. The camera then seeks to perform the role of human vision, one of the most complicated sensory systems in the universe, the various functions of which are either not built into or not yet achievable using consumer grade cameras. For example, the resolution of the entire view (real + virtual) is limited to that of the display device in case of VST. This constraint is also present in optical see-through devices, with a crucial difference that it is only applicable to virtual parts of the scene. 
@@ -316,9 +312,11 @@ Low & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,partopsep=0pt,alig
 
 \subsection{Ship Instrument Augmentation}
 
-Mixed reality displays described in the previous section form a part of enabling technologies for the mixed reality ship maneuvering training conceptualized in this research. HMDs for instance can help create visual perception of an offshore oil platform standing on the open sea. In other training scenarios they may be used to display tracks/lanes for navigational tracking or virtual ships on collision course/sailing side-by-side etc. Different artifacts may be displayed depending on training objectives and the perceptions that need to be created. Ships over the years though have evolved to be technically complex machines. The bridge room of a modern age vessel houses multiple instruments tracking different aspects of its reality. Therefore, the design of a mixed reality environment onboard a modern seafaring vessel should consider how virtual objects interact with various instruments in the bridge room so as to accurately correspond with the reality that is being visually perceived.  
+Mixed reality displays described in the previous section form a part of enabling technologies for the mixed reality ship maneuvering training conceptualized in this research. HMDs for instance can help create visual perception of an offshore oil platform standing on the open sea. In other training scenarios they may be used to display tracks/lanes for navigational tracking or virtual ships on collision course/sailing side-by-side etc. Different artifacts may be displayed depending on training objectives and the perceptions that need to be created. Ships over the years though have evolved to be technically complex machines. The bridge room of a modern age vessel houses multiple instruments tracking different aspects of its reality. Therefore, the design of a mixed reality environment on-board a modern seafaring vessel should consider how virtual objects interact with various instruments in the bridge room to accurately correspond with the reality that is being visually perceived.  
 
 \subsubsection{Bridge Instrumentation}
+
+
 
 \subsubsection{Tracking Requirements}
 
