@@ -16,7 +16,7 @@ With increasing automation, the need for human-operation will reduce and so will
 
 
 \subsection{Research Questions}
-Ship simulators are used extensively by ship crew for learning, certification and, upkeep of operational skills. But being simulations by nature, they are approximations of the process after all. Training on-board real ships is ideal from the perspective of learning dynamics under various weather conditions. Besides, such a training should help getting better acquainted with vessel-specific instrumentation. However, it is much more difficult, infeasible even to set up environments for training purposes on-board real vessels compared to the simulator, as it involves setting up large physical objects for training. For example, an offshore oil platform in the case of dynamic positioning training.   
+Ship simulators are used extensively by ship crew for learning, certification and, upkeep of operational skills. Being simulations by nature, they are approximations of the process after all. Training on-board real ships is ideal from the perspective of learning vessel dynamics. It provides for hands-on experience of ship's movement behavior under various weather conditions. Besides, such a training should help get better acquainted with vessel-specific instrumentation. However, it is much more difficult, perhaps even infeasible to set up environments for training purposes on-board real vessels compared to the simulator. This is because training environments in this context involve large physical objects such as ports, natural landscapes, other vessels, etc. For example, an offshore oil platform in the case of dynamic positioning training.   
 
 A system of generating visual perception of a training environment is then desirable. It can be a solution to the non-trivial problem of setting up training environments. If such a system were capable of producing a convincing feeling of the presence of physical objects in the surrounding, it would enable on-board training in real environments enhanced by visuals of virtual objects. 
 
@@ -27,11 +27,11 @@ The following research questions were proposed, with the intention of learning f
 	\item How effective a tool can mixed reality be for learning ship maneuvering? 
 \end{enumerate}}
 
-The remainder of this chapter provides a brief overview of the concept augmented reality before describing the method of research used in this study.
+The remainder of this chapter provides a brief description of the concept of augmented reality before describing the method of research used in this study.
 
 \section{Augmented Reality}
 \label{sec:augreal}
-Augmented reality refers to the merging of virtual and real worlds in which physical and digital objects co-exist and interact in real time. In this realm, distinctions have been made between various types of applications based on the amount of virtual content in the mix. As figure \ref{fig:mixedrealitycontinuum} shows, a continuum has been drawn characterising different mixed reality environments \cite{milgram1995augmented}. Completely real and completely virtual environments bring up far ends of the continuum with different levels of virtuality in between. 
+Augmented reality refers to the merging of virtual and real worlds in which physical and digital objects co-exist and interact in real time. In this realm, distinctions have been made between various types of applications based on the amount of virtual content in the mix. \cite{milgram1995augmented} drew up a continuum (figure \ref{fig:mixedrealitycontinuum}) characterising different mixed reality environments. Completely real and completely virtual environments bring up far ends of the continuum with different levels of virtuality in between. 
 
 \begin{figure}
 	\centering
@@ -50,20 +50,22 @@ Augmented reality on the other hand refers to systems that feature predominantly
 \end{enumerate} 
 
 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{hololensAR}
+	\caption{Conceptual depiction of augmented reality used in design}
+	\label{fig:augreal}
+\end{figure}
+
 %Further, some factors have been identified that help distinguish between different mixed reality systems: extent of world knowledge (whether the augmentation takes place in a modeled world or not), reproduction fidelity (quality of display of the real/virtual objects) and extent of presence metaphor (extent to which user feels they are present in the displayed scene themselves). A detailed description of mixed reality displays and differences in their characteristics can be found in \cite{milgram1995augmented}. 
 
-In general terms, mixed reality is an emerging technology which can be used to display virtual objects merged with real world views. It has been found to be useful in job scenarios that require execution of complex tasks. One use case that has been explored in the real-world is the assembly and maintenance of equipment. During an operation, overlaying 3-D virtual job-support guides on see-through images of actual equipment obviates the need to look away in order to refer to a manual. A study on the application of augmented reality found that 3-D virtual guides help users perform ship building and maintenance tasks in almost half the usual time \parencite{henderson2011exploring}.
+In general terms, mixed reality is an emerging technology which can be used to display virtual objects merged with real world views. It has been found to be useful in job scenarios that require execution of complex tasks. One use case that has been explored in the real-world is assembly and maintenance of equipment. During an operation, overlaying 3-D virtual job-support guides on see-through images of actual equipment obviates the need to look away in order to refer to a manual. A study on the application of augmented reality found that 3-D virtual guides help users perform ship building and maintenance tasks in almost half the usual time \parencite{henderson2011exploring}.
 
 
-%\begin{figure}
-%	\centering
-%	\includegraphics[width=\linewidth]{hololensAR}
-%	\caption{Conceptual depiction of augmented reality used in design}
-%	\label{fig:augreal}
-%\end{figure}
 
 \section{Research Method}
-Situated cognitive engineering \parencite{neerincx2008situated} was the research method used in this study. This method separates a human-computer interaction research into three different phases namely derive, specify and evaluate. Accordingly, this report has been structured to describe the three phases of this research outlined by sCE. Chapter 2 named Foundation first describes so-called operational demands that define requirements of the problem at an abstract level. It goes on to describe existing knowledge of human anatomical factors that can be leveraged in designing a solution to the problem. The chapter ends with a survey of possible technological solutions, stating also their strengths and weaknesses. Chapter 3 named Specification sketches a real-life scenario in which the artifact could possibly be used. It lists formal requirements for the software system and makes claims about consequences of its use. Chapter 4 named Evaluation describes the artifact that was developed, an experiment designed to test the claims and, discusses result and conclusion of the experiment. 
+A research method called situated cognitive engineering was used in this study. This method separates a human-computer interaction research into three different phases namely derive, specify and evaluate \parencite{neerincx2008situated}. Accordingly, this report has been structured to describe the three phases of this research outlined by sCE. Chapter 2 named Foundation first describes so-called operational demands that define requirements of the problem at an abstract level. It goes on to describe existing knowledge of human anatomical factors that can be leveraged in designing a solution to the problem. The chapter ends with a survey of possible technological solutions, stating also their strengths and weaknesses. Chapter 3 named Specification sketches a real-life scenario in which the artifact could possibly be used. It lists formal requirements for the software system and makes claims about consequences of its use. Chapter 4 named Evaluation describes the artifact that was developed, an experiment designed to test the claims and, discusses result and conclusion of the experiment. 
 
 \begin{figure}
 	\centering
