@@ -1,7 +1,28 @@
-\chapter{Specification}
+\chapter{Design Specification}
+This research is a study of the viability of leveraging augmented reality technology for simulation-based training purposes in the maritime sector. A working prototype was envisaged in order to access the user experience of such a system. This chapter consists of the design solution that was devised to the ship handling training problem outlined in the previous chapter. 
+
+Development of the actual prototype was based on a few functional requirements thought to be essential to the system (section \ref{sec:functionalreqs}). SCE method prescribes that functional requirements be linked to objectives of the system. An evaluation of the prototype is then conducted to test it's ability to meet desired objectives. Evaluation hinges on claims that are made regarding the system. Claims in this context are the hypothesis that are tested during system evaluation(section \ref{sec:claims}). First, section \ref{sec:trainingcomparison} makes a comparison of three types of on-board training differing in their expected outcomes in terms of learning. Later on, a basic use-case flow is outlined along with alternate steps of system use in section \ref{sec:usecase}.
+
+
+\subsection{Design Challenge}
+Design of systems that involve human-computer interaction are intended to be aids of human activity. However, designs are as much constraints on the solution space as they are solutions themselves to the problem at hand \parencite{carroll2000five}. In other words, a proposal for a certain way of tackling a problem ties further reflections of it's effectiveness to specifics of the design. How then does a research in HCI deal with this unavoidable conflict?
+
+Further, it is often advised for designs to be open-for-change. A popular saying in software design practice is \textit{requirements always change.} Changing requirements are not conducive to testing. It may turn out that results are no longer be relevant due to requirement change.
+ 
+% "Thinking impedes progress in doing, and doing obstructs thinking."
+One way to counter this problem is to list a few different desirable objectives for the system in question. A broader look into the problem space allows for insight on requirements of a minimum viable product. It can be posited that such an insight enables the design of a system that is more accommodating of changes in requirement. By exploring many different objectives and designing to meet their basic underlying functional requirements, the chances that future requirement changes are related to those already explored is increased and so is the validity of evaluations. 
 
 \section{On-board Training Possibilities}
-\begin{table}[h]
+\label{sec:trainingcomparison}
+An analysis of various simulation-based on-board training scenarios resulted in three categories of training possibilities characterised by learning objectives. A comparison of the three categories - manoeuvre training, navigation training and, emergency response training is shown in table \ref{tab:trainingoptions}.
+
+Lorem ipsum dolor sit amet, sea omnes commune posidonium ut. Pro eu imperdiet evertitur adversarium. Omnes mediocritatem pri ne, has assentior similique ex. Eam partem fastidii molestiae ex.
+
+Minim reprimique his et, dicit ludus at eam, vel audire nostrum et. At sed insolens oportere iudicabit. Erat scriptorem cum an, has cu eros nonumes. Duo an nulla tincidunt. Singulis perpetua iracundia ne pri.
+
+No qui bonorum equidem eleifend, accusam fastidii duo ad. Sonet propriae his te. Per no quodsi oportere conclusionemque. Eirmod oblique vix ea. An diam dictas definitionem eum, partem verear ut nec. Altera commune voluptatibus at est, et pri verterem mnesarchum. Vel ei verterem legendos appellantur, labitur recusabo no duo.
+
+\begin{table}
 \centering
 \caption{Comparison of on-board training options}
 \label{tab:trainingoptions}
@@ -22,7 +43,7 @@ Scenarios &
 \renewcommand{\labelitemi}{\tiny\listsymb} 
 \item Path planning 
 \item Navigate port entrances
-\end{itemize}
+\end{itemize} \vspace{-\baselineskip}
 & \vspace{-2mm} \begin{itemize}[leftmargin=*,topsep=0pt,partopsep=0pt,align=left,itemsep=0cm]
 \renewcommand{\labelitemi}{\tiny\listsymb} 
 \item Fire in engine room 
@@ -42,6 +63,7 @@ Competences & \vspace{-2mm}\begin{itemize}[leftmargin=*,topsep=0pt,partopsep=0pt
 \item Route planning
 \item Identify, use maritime navigation aids
 \end{itemize}
+\vspace{-\baselineskip}
 & \vspace{-2mm}\begin{itemize}[leftmargin=*,topsep=0pt,partopsep=0pt,align=left,itemsep=0cm]
 \renewcommand{\labelitemi}{\tiny\listsymb} 
 \item Emergency severity assessment 
@@ -50,7 +72,7 @@ Competences & \vspace{-2mm}\begin{itemize}[leftmargin=*,topsep=0pt,partopsep=0pt
 \hline
 Equipments Required & Radar, ARPA, ECDIS, Fiducial markers in bridge & Radar, ECDIS, ARPA, AIS, Markers in bridge & Fiducial markers in engine room, deck, etc. \\
 \hline
-Onboard crew Requirements & 
+Crew Requirement & 
 \vspace{-2mm} \begin{itemize}[leftmargin=*,topsep=0pt,partopsep=0pt,align=left,itemsep=0cm]
 \renewcommand{\labelitemi}{\tiny\listsymb} 
 \item Trainee 
@@ -68,34 +90,136 @@ Onboard crew Requirements &
 \item Full crew / part of crew located at emergency site
 \end{itemize} \vspace{-\baselineskip} \\
 %Trainee, OOW, Captain/Instructor & Trainee, OOW, Captain/Instructor & Full crew / part of crew located at emergency site \\ 
-\hline
-Photorealism required & High & Low & Medium \\
+%\hline
+%Photorealism required & High & Low & Medium \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 
-\paragraph{Comparison of training methods}
+\section{Design Scenario}
 
-\begin{table}[]
-\centering
-\caption{Comparison of training methods}
-\label{my-label}
-\begin{tabular}{@{}p{4.8cm}|P{2.5cm}|P{2.5cm}|P{2.5cm}|@{}}
-\toprule
-\multicolumn{1}{c|}{ } & \multicolumn{1}{P{2.2cm}|}{\textbf{Simulator training}} & \multicolumn{1}{P{3cm}|}{\textbf{MR on-board training}} & \multicolumn{1}{P{2.3cm}|}{\textbf{On-the-job training}} \\ 
-\midrule
-Practice on real vessel                         & \xmark                            & \cmark                                        & \cmark                                        \\
-Practice in various real weather conditions     & \xmark                            & \cmark                                        & \cmark                                        \\
-Perform training repetitions in same conditions & \cmark                            & \xmark                                        & \xmark                                        \\
-Scope for standardized competency assessment    & \cmark                            & \cmark                                        & \xmark                                        \\
-Scope for gradation of learning outcomes   		& \cmark                            & \cmark                                        & \xmark                                        \\
-Close range ship handling training              & \cmark                            & \cmark                                        & \xmark                                        \\
-Scope for introduction of learning framework    & \cmark                            & \cmark                                        & \xmark                                        \\
-Risk of collision with other vessels            & \xmark                            & \cmark                                   		& \cmark                                        \\
-Suitable for learning level                     & All                               & All		                               & Advanced       \\
-\bottomrule                         
-\end{tabular}
-\end{table}
+\textbf{“AugMan helps Michiel practice ship maneuvering and, improve depth perception.”}
+
+Michiel, 25 years old, received the dynamic positioning (DP) certificate a short time ago. He has just taken up his first job as a dynamic positioning operator (DPO) on-board VOS BASE - a medium-size platform supply vessel. Fitted with Class 1 DP system, the vessel has been rented by Royal Dutch Shell to supply cargo to offshore oil platforms off the Dutch coast. Michiel is joined on the deck by captain Bert and chief mate Steve, both experienced seafarers capable of handling the ship as well as its DP equipment.
+
+He lacks manual vessel maneuvering skills. Though familiar with bridge equipment, he has little experience using it on an actual vessel. Maneuvering a large vessel in close range of offshore platforms causes him anxiety. He feels unprepared for an emergency such as failure of one of the DP system's components effectively rendering it unusable. Should this situation arise during a load/unload operation, an operator needs to maintain the vessel's position and heading manually - at least until it is safe to stop the operation. Following this, the vessel will be steered away outside the 500m safety zone of the oil rig. With a dysfunctional DP system, either joystick maneuvering or manual vessel handling will have to be engaged; both of which he is not adequately trained for. 
+
+\section{Functional Requirements}
+\label{sec:functionalreqs}
+%The prototype would be used to test feasibility of the augmented-reality ship maneuvering training method described here.
+This section lists the functional requirements that were drawn for a prototype application. Requirements were based primarily on specifications of augmented reality put forward by \cite{azuma1997survey}. They are tailored to suit the operational demands of ship maneuvering training. Accordingly, functional requirements of the prototype are listed below.\\
+
+The system shall be able to:
+\begin{enumerate}[itemsep=0.01em]
+\item \textbf{Present 3D images} of objects such as ships, oil platforms, buoys and landscape features to create the augmented environment.
+\item \textbf{Register virtual objects} in user’s physical space.
+%to create a convincing feeling of the object’s presence.
+\item \textbf{Generate projections} of virtual object to be consistent with user position.
+\item Provide exercises to \textbf{accommodate various learning goals}. 
+\item \textbf{Provide maneuvering instructions} adapted to user's maneuvering proficiency.
+\end{enumerate}
+
+\section{Claims}
+\label{sec:claims}
+\begin{enumerate}[itemsep=0.01em]
+	\item Presenting user with \textbf{3D images} helps \textbf{create a convincing feeling of presence} of an object in user’s reality. 
+	\item \textbf{Registering} the virtual object in a fixed space \textbf{creates a convincing feeling of presence}.
+%	required for depth perception, so that size can be compared with that of the surroundings. 
+	\item \textbf{Generating view-specific projections} of virtual object based on user position is essential \textbf{to leverage parallax effect} which provides depth cues.
+	\item \textbf{Maneuvering instructions}, help \textbf{automate the task of coaching}. 
+	\item \textbf{Different types of maneuvering exercises} makes the system \textbf{useful to a wide range of users} of varying levels of maneuvering skills.
+\end{enumerate}
+
+\section{Use Case}
+\label{sec:usecase}
+\subsection{Manoeuvre Training}
+\fbox{
+	\parbox{0.95\linewidth}{
+		\begin{description}[labelwidth=3.5cm]
+			\item [Actors:] DP Operator, AugMan, Captain/Instructor.
+			\item [Circumstance:] DP operator is idle on an offshore supply vessel.
+			\item [Precondition:] Vessel is not undertaking any operation.
+			\item [Post condition:] DP operator has improved maneuvering skills.
+			\item [Method:] Practice maneuvering in augmented reality.
+		\end{description}
+}}
+
+%	 It is idle at sea and is not in the midst of traffic from other seafaring vessels.
+
+\subsection{Basic Flow}
+\begin{enumerate}[itemsep=.01em]
+	\item Operator wears AR device and starts the application. 
+	\item AugMan presents a list maneuvering exercises and asks user to choose.
+	\item Operator chooses an exercise and orients himself (including head position) in the direction in which the virtual object/augmented environment should appear.
+	\item Operator indicates he is ready to start the exercise.
+	\item AugMan brings up the augmented reality environment and asks the operator to set vessel controls to neutral position before starting the exercise.
+	\item After making sure that the vessel controls are in neutral position, operator starts the exercise. 
+	\item AugMan receives position changes from the vessel and renders visuals of the virtual environment accordingly.
+	\item Operator practices maneuvering the vessel in the virtual environment using visuals from the AR device as reference.
+	\item AugMan provides a review and feedback of the maneuvering performance.
+\end{enumerate}
+
+\subsubsection{Alternative steps (Beginner Level)}
+
+Application provides direction and maneuvering hints throughout the exercise.
+
+\begin{enumerate}[noitemsep]
+	\item Operator wears Ar device and starts the application. 
+	\item AugMan presents a list of \textbf{low-difficulty maneuvering exercises} available and asks user to choose.
+	\item Operator chooses an exercise and orients himself (including head position) in the direction in which the virtual object/augmented environment should appear.
+	\item Operator indicates he is ready to start the exercise.
+	\item AugMan brings up the augmented reality environment and asks the operator to set vessel controls to neutral position before starting the exercise.
+	\item After ensuring that the vessel controls are in neutral position, operator starts the exercise. 
+	\item AugMan receives position changes from the vessel and renders visuals of the virtual environment accordingly.
+	\item Operator practices maneuvering the vessel in the virtual environment using visuals from the AR device as reference.
+	\item Application provides \textbf{helpful hints} for maneuvering such as the directional pointers and controls to be engaged \textbf{throughout the exercise}.
+	\item AugMan provides a review and feedback of the maneuvering performance.
+\end{enumerate}
+
+\subsubsection{Alternative steps (Intermediate Level)}
+
+Application provides maneuvering hints during the exercise on request by user.
+
+\begin{enumerate}[noitemsep]
+	\item Operator wears AR device and starts the application. 
+	\item AugMan presents a list of \textbf{medium-difficulty maneuvering exercises} available and asks user to choose.
+	\item Operator chooses an exercise and orients himself (including head position) in the direction in which the virtual object/augmented environment should appear.
+	\item Operator indicates he is ready to start the exercise.
+	\item AugMan brings up the augmented reality environment and asks the operator to set vessel controls to neutral position before starting the exercise.
+	\item Having ensured that the vessel controls are in neutral position, operator starts the exercise. 
+	\item AugMan receives position changes from the vessel and renders visuals of the virtual environment accordingly.
+	\item Operator practices maneuvering the vessel in the virtual environment using visuals from the AR device as reference.
+	\item Application provides \textbf{helpful hints} for maneuvering such as the controls to be engaged during the exercise \textbf{on need basis}.
+	\item AugMan provides a review and feedback of the maneuvering performance.
+\end{enumerate}
 
 
+\subsubsection{Alternative steps (Expert Level)}
+
+Application does not provide maneuvering hints during the exercise.
+
+\begin{enumerate}[noitemsep]
+	\item Operator wears AR device and starts the application. 
+	\item AugMan presents a list of \textbf{high-difficulty maneuvering exercises} available and asks user to choose.
+	\item Operator chooses an exercise and orients himself (including head position) in the direction in which the virtual object/augmented environment should appear.
+	\item Operator indicates he is ready to start the exercise.
+	\item AugMan brings up the augmented reality environment and asks the operator to set vessel controls to neutral position before starting the exercise.
+	\item Having ensured that the vessel controls are in neutral position, operator starts the exercise. 
+	\item AugMan receives position changes from the vessel and renders visuals of the virtual environment accordingly.
+	\item Operator practices maneuvering the vessel in the virtual environment using visuals from the AR device as reference.
+	\item Application provides \textbf{no maneuvering hints} during the exercise.
+	\item AugMan provides a review and feedback of the maneuvering performance.
+\end{enumerate}
+
+\subsection{Ontology}
+\begin{description}
+\item[Augman] - augmented reality prototype consisting of see-through glasses and a head tracking system capable of registering objects a predetermined location in space
+%built using TrackIR that runs on a PC, and a software program that streams head position information to the smartglasses.
+%TrackIR - Motion tracking device that tracks head motions with up to 6 degrees of freedom of movement. Conceived originally as a game controller that enables handsfree view control, it uses a video camera that observes infrared light that is reflected/emitted by markers worn by the user.
+\item[See-through glasses] - Wearable see-through glasses that are capable of rendering 3D graphics making it possible to create augmented reality environments which leaves the wearer’s view of the outside world intact while rendering virtual objects in the same visual field.
+\item[DP Operation trainee] - Dynamic positioning operator with limited manual vessel handling experience.
+\item[DP Vessel] - A vessel with dynamic positioning system installed on it that can also be operated in manual mode wherein the automatic vessel position control systems can be disabled for training purposes.
+\item[Training supervisor] - A qualified and experienced officer-of-the-watch who is capable of manual vessel control that instructs trainees on learning goals, provides feedback on performance and can take control of the vessel if necessary.
+
+\end{description}

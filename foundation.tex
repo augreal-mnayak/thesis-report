@@ -1,30 +1,30 @@
 \chapter{Foundation}
+\label{chap:foundation}
+A literature survey on the topic of augmented reality in maritime context brings up studies of applications that aid job performance by providing helpful contextual information on top of real-world views. Overlaying route way-points, distance to next way-point, local hazards and other navigational aids allows the integration of various information that is used by the officer of the watch into one single augmented display. In poor visibility conditions, virtual rails on both sides of the ship help with steering. Buoys, fog signals, day beacons and other navigational aids can also be visually overlaid in low-visibility conditions to help with navigation. These applications show the use of augmented reality as aids for task execution. But little research can be found on use in training ship crew members.
 
-A literature survey on the topic of augmented reality in maritime context brings up studies of applications that aid job performance by providing helpful contextual information on top of real-world views. Overlaying route waypoints, distance to next waypoint, local hazards and other navigational aids allows the integration of various information that is used by the officer of the watch into one single augmented display. In poor visibility conditions, virtual rails on both sides of the ship help with steering. Buoys, fog signals, day beacons and other navigational aids can also be visually overlaid in low-visibility conditions to help with navigation. These applications show the use of augmented reality as aids for task execution. But little research can be found on use in training ship crew members.
+This chapter covers results of a domain analysis that was used to derive requirements for a scenario-based ship manoeuvring training method. The content explored in this chapter are relevant to answering the research question - what are the operational scenarios in which mixed reality training could be useful. In keeping with the sCE method, it covers operational demands, human factors and, technological options available for the design of this human-computer interface for maritime training. 
 
-This chapter covers results of a domain analysis that was used to derive requirements for a scenario-based ship maneuvering training method. The content explored in this chapter are relevant to answering the research question - what are the operational scenarios in which mixed reality training could be useful. In keeping with the sCE method, it covers operational demands, human factors and, technological options available for the design of this human-computer interface for maritime training. 
-
-The first section is an introduction to ship handling in general, including a specific case - the offshore energy industry where unique requirements led to the development of increased automation and specialised equipment for manoeuvring. Section \ref{sec:operationaldemands} titled operational demands describe from an operator point-of-view, requirements for safe execution of ship handling operations. In designing a technological solution, the SCE method takes into account human factors that could affect interactions between users and the system being developed. Section \ref{sec:humanfactors} titled human factors knowledge describes mode errors - a type of error arising from the operation of state-dependent systems out of state. Finally, section \ref{sec:envisionedtech} describes technological options available to implement the mixed reality training method that is envisioned along with their pros and cons.
+The first section is an introduction to ship handling in general, including a specific case - the offshore energy industry where unique requirements led to the development of increased automation and specialized equipment for manoeuvring Section \ref{sec:operationaldemands} titled operational demands describe from an operator point-of-view, requirements for safe execution of ship handling operations. In designing a technological solution, the SCE method takes into account human factors that could affect interactions between users and the system being developed. Section \ref{sec:humanfactors} titled human factors knowledge describes mode errors - a type of error arising from the operation of state-dependent systems out of state. Finally, section \ref{sec:envisionedtech} describes technological options available to implement the mixed reality training method that is envisioned along with their pros and cons.
 
 
 
 \section{Ship Handling}
 
-Given the varied environments in which ships are handled, a distinction is made between vessel handling in restricted spaces as opposed to in open seas with vast empty space. Manoeuvring typically refers to ship handling in confined spaces, at low speeds; requiring accuracy and precision in movement. Navigation in contrast, takes place in open seas with more room for movement making it a relatively easy task compared to maneuvering. Besides, a ship usually moves in straight lines while navigating the open seas with the objective to reach destination in the most efficient manner. Fewer changes in direction occur over time, there is lesser need to steer in comparison with manoeuvring scenarios. 
+Given the varied environments in which ships are handled, a distinction is made between vessel handling in restricted spaces as opposed to in open seas with vast empty space. Manoeuvring typically refers to ship handling in confined spaces, at low speeds; requiring accuracy and precision in movement. Navigation in contrast, takes place in open seas with more room for movement making it a relatively easy task compared to manoeuvring Besides, a ship usually moves in straight lines while navigating the open seas with the objective to reach destination in the most efficient manner. Fewer changes in direction occur over time, there is lesser need to steer in comparison with manoeuvring scenarios. 
 
-Automation has been seeping into the marine industry over the years. It assists human operators to accomplish vessel handling tasks with functions such as autopilot for navigation and dynamic positioning for manoeuvring. The underlying idea is to counter water resistance to movement using the ship's propellers and thrusters, while also accounting for environmental forces such as wind, waves and current measured using sensors on board. Current generation autopilots do a satisfactory job of navigating ships in open seas. Maneuvering on the other hand continues to be a specialized human job even though a good degree of automation support exists.
+Automation has been seeping into the marine industry over the years. It assists human operators to accomplish vessel handling tasks with functions such as autopilot for navigation and dynamic positioning for manoeuvring The underlying idea is to counter water resistance to movement using the ship's propellers and thrusters, while also accounting for environmental forces such as wind, waves and current measured using sensors on board. Current generation autopilots do a satisfactory job of navigating ships in open seas. Manoeuvring on the other hand continues to be a specialized human job even though a good degree of automation support exists.
 
 % Hence, this research focuses on training for ship maneuvering. 
 
-The training method developed here is aimed at learning maneuvering. Besides being a skilled task, it also involves safety risks by nature of its activities. The next section describes challenges of maneuvering and its relevance in the offshore oil industry. It is followed by a brief description of Dynamic Positioning Systems, the automation technology that assists with ship maneuvering tasks and its riders that entail the presence of operators with manual handling skills. 
+The training method developed here is aimed at learning manoeuvring Besides being a skilled task, it also involves safety risks by nature of its activities. The next section describes challenges of manoeuvring and its relevance in the offshore oil industry. It is followed by a brief description of Dynamic Positioning Systems, the automation technology that assists with ship manoeuvring tasks and its riders that entail the presence of operators with manual handling skills. 
 
-\subsection{Maneuvering}
+\subsection{Manoeuvring}
 
-Vessel handling at low speeds has been difficult on marine vessels historically \parencite{brittanica:ship}. From a technical point of view, the working mechanism of past rudder systems made it difficult to turn vessels 'in place'. Maneuvering a large vessel at low speeds is often a challenging operation even from the perspective of a human operator. Examples of difficult maneuvering operations include approaching a harbour, berthing in a port, sailing side-by-side another vessel, approaching and stationing close to an oil platform, etc. An often recurring sequence is that of a port-bound vessel heading to its berthing location in harbour. Having entered pilot waters from seaward, a vessel's course needs to be controlled accurately to ensure safe passage through channels, bridges, and locks; avoiding collisions with other vessels at the same time. A method for objective evaluation of ship handling difficulties in restricted maneuvering area, areas of traffic congestion is presented in \parencite{inoue2000evaluation}.
+Vessel handling at low speeds has been difficult on marine vessels historically \parencite{brittanica:ship}. From a technical point of view, the working mechanism of past rudder systems made it difficult to turn vessels 'in place'. Manoeuvring a large vessel at low speeds is often a challenging operation even from the perspective of a human operator. Examples of difficult manoeuvring operations include approaching a harbour, berthing in a port, sailing side-by-side another vessel, approaching and stationing close to an oil platform, etc. An often recurring sequence is that of a port-bound vessel heading to its berthing location in harbour. Having entered pilot waters from seaward, a vessel's course needs to be controlled accurately to ensure safe passage through channels, bridges, and locks; avoiding collisions with other vessels at the same time. A method for objective evaluation of ship handling difficulties in restricted manoeuvring area, areas of traffic congestion is presented in \parencite{inoue2000evaluation}.
 
-Many factors affect the precise handling of a given vessel - it's size, power, thruster configuration, on-board bridge equipment, etc. Further, the vessel's handling characteristics are subject to environmental conditions (the combined effect of current, wind and, waves). Besides, low speed maneuvering often occurs in close proximity to man-made constructions such as docks, offshore structures and other ships. The potentially destructive consequences of collision risks in such scenarios makes it a stressful operation, further amplifying the challenge of maneuvering. Mistakes have high associated costs, possibly leading to lost lives and damage to expensive constructions.
+Many factors affect the precise handling of a given vessel - it's size, power, thruster configuration, on-board bridge equipment, etc. Further, the vessel's handling characteristics are subject to environmental conditions (the combined effect of current, wind and, waves). Besides, low speed manoeuvring often occurs in close proximity to man-made constructions such as docks, offshore structures and other ships. The potentially destructive consequences of collision risks in such scenarios makes it a stressful operation, further amplifying the challenge of manoeuvring Mistakes have high associated costs, possibly leading to lost lives and damage to expensive constructions.
 
-\section{Offshore Supply Operations}
+\section{Offshore Exploration and Supply}
 
 A special application of ship handling skills is on offshore supply vessels. These are vessels used to support exploration and production of offshore mineral or energy resources located in continental shelves around the world. Specific missions of offshore supply vessels include 
 
@@ -36,7 +36,7 @@ A special application of ship handling skills is on offshore supply vessels. The
 \item safety standby for emergency response and rescue operations
 \end{itemize}
 
-Maneuvering plays an important role in platform supply vessels. They transport supplies such as fuel, water and chemicals to the offshore facilities and bring back disposables for proper recycling. Hence, these vessels need to approach and be stationed close to platforms on a regular basis. Loading and unloading operations happen at the stern of a vessel and requires station keeping till the operation is complete. This requirement led to the development and subsequent popularity of dynamic positioning systems. These are automated systems that help with station keeping and other maneuvering operations. The following sections describe the dynamic positioning system, their conceptual working mechanism and modes of operation before making a case about the need for skilled manual maneuvering operators.
+Manoeuvring plays an important role in platform supply vessels. They transport supplies such as fuel, water and chemicals to the offshore facilities and bring back disposables for proper recycling. Hence, these vessels need to approach and be stationed close to platforms on a regular basis. Loading and unloading operations happen at the stern of a vessel and requires station keeping till the operation is complete. This requirement led to the development and subsequent popularity of dynamic positioning systems. These are automated systems that help with station keeping and other manoeuvring operations. The following sections describe the dynamic positioning system, their conceptual working mechanism and modes of operation before making a case about the need for skilled manual manoeuvring operators.
 
 \begin{figure}
 	\centering
@@ -50,13 +50,13 @@ Maneuvering plays an important role in platform supply vessels. They transport s
 
 \subsection{Dynamic Positioning System}
 
-Dynamic positioning (DP) is an automated system that helps human operators with maneuvering operations. It began to be developed as a system that maintains position and heading of a vessel automatically by using its propellers and thrusters. The use of DP systems has been increasing over the years since its inception in 1960s. There are well over 2000 DP vessels in operation today \parencite{sorensen2011survey}. From early days of the technology where main focus areas of research were accurate position measurement and control system technologies used, research has now moved on to more specialized problems such as optimizing them for energy efficiency. With increasing popularity of DP systems and increased use of sophisticated technology on-board ships, the marine industry can expect more advanced automation in vessel control over the years. Future systems could be enabled with features such as automatic maneuvering in shallow water and harbor areas, formation sailing, and automatic collision avoidance.
+Dynamic positioning (DP) is an automated system that helps human operators with manoeuvring operations. It began to be developed as a system that maintains position and heading of a vessel automatically by using its propellers and thrusters. The use of DP systems has been increasing over the years since its inception in 1960s. There are well over 2000 DP vessels in operation today \parencite{sorensen2011survey}. From early days of the technology where main focus areas of research were accurate position measurement and control system technologies used, research has now moved on to more specialized problems such as optimizing them for energy efficiency. With increasing popularity of DP systems and increased use of sophisticated technology on-board ships, the marine industry can expect more advanced automation in vessel control over the years. Future systems could be enabled with features such as automatic manoeuvring in shallow water and harbour areas, formation sailing, and automatic collision avoidance.
 
 %The popularity of DP systems has grown to a point where they are a component of medium to large sized vessels these days. 
 
 %This evolution of navigation technology on ships from mere position monitoring systems to automatic position control system has been accompanied by a corresponding growth of specialized personnel responsible for the monitoring of DP systems. 
 
-Position reference systems are vital to the operation of dynamic positioning systems. Information from position reference sensors that provide the vessel’s position and heading, along with information from wind sensors, motion sensors and gyrocompasses on the vessel are used by the systems. It is supplied as input to a program that calculates changes in position and heading required to bring the vessel to a preset location by activating the vessel’s thrusters when necessary. Using a mathematical model of the ship and, the forces acting on it, DP system can control the vessel's thrusters to station it in a preset location.
+Position reference systems are vital to the operation of dynamic positioning systems. Information from position reference sensors that provide the vessel’s position and heading, along with information from wind sensors, motion sensors and gyrocompasses on the vessel are used by the systems. It is supplied as input to a program that calculates changes in position and heading required to bring the vessel to a pre-set location by activating the vessel’s thrusters when necessary. Using a mathematical model of the ship and, the forces acting on it, DP system can control the vessel's thrusters to station it in a pre-set location.
 
 % Figure \ref{fig:dparchitecture} is a model of the functional components of a dynamic positioning system. 
 %
@@ -98,7 +98,7 @@ Most DP systems are offered with several modes of operation. They differ in the 
 \begin{enumerate}
 
 \item \textbf{Joystick}: Operator can control vessel position and heading manually using a joystick. 
-\item \textbf{Auto heading}: In this mode, the vessel automatically maintains a preset heading. 
+\item \textbf{Auto heading}: In this mode, the vessel automatically maintains a pre-set heading. 
 \item \textbf{Auto position}: Maintain both the vessel's position and heading automatically. 
 \item \textbf{Follow target}: Enables the vessel to follow a moving target. 
 \item \textbf{Autopilot}: In this mode, the vessel steers automatically to follow a predefined course of movement. 
@@ -115,7 +115,7 @@ It can be observed that besides functionality, the modes listed above differ by 
 %\end{figure}
 
 \subsection{Manual Handling}
-Going by number of total losses occuring per year (refer figure \ref{fig:lossesbyyear}), the safety of vessels world-wide can be said to have improved over the years, particularly in the last decade, despite the ever increasing number of sea-faring vessels. Nevertheless, there is a growing concern in the industry regarding over-reliance on electronic navigation aids. Studies have found human error to be the dominant factor in a significant percentage of the accidents \parencite{baker2005accident, hauff2014analysis}. Incidents such as the Norne shuttle tanker's collision with an FPSO on March 5, 2000, Big Orange XVIII's collision with the water injection facility Ekofisk 2/4-W on June 8, 2009 and standby vessel Far Symphony's impact with the mobile installation West Venture on March 7, 2004 are mentioned as cases of shipping incidents that showcase the lack of preparedness among crew members to handle with emergency situations \parencite{vinnem2013offshore}.
+Going by number of total losses occurring per year (refer figure \ref{fig:lossesbyyear}), the safety of vessels world-wide can be said to have improved over the years, particularly in the last decade, despite the ever increasing number of sea-faring vessels. Nevertheless, there is a growing concern in the industry regarding over-reliance on electronic navigation aids. Studies have found human error to be the dominant factor in a significant percentage of the accidents \parencite{baker2005accident, hauff2014analysis}. Incidents such as the Norne shuttle tanker's collision with an FPSO on March 5, 2000, Big Orange XVIII's collision with the water injection facility Ekofisk 2/4-W on June 8, 2009 and standby vessel Far Symphony's impact with the mobile installation West Venture on March 7, 2004 are mentioned as cases of shipping incidents that showcase the lack of preparedness among crew members to handle with emergency situations \parencite{vinnem2013offshore}.
 
 \begin{figure}
 	\centering
@@ -126,13 +126,13 @@ Going by number of total losses occuring per year (refer figure \ref{fig:lossesb
 
 \section{Operational Demands}
 \label{sec:operationaldemands}
-An analysis of the task domain was conducted in order to better understand the actions performed by human operators while maneuvering a vessel and the conditions under which they are performed. This section describes results of the analysis which in turn drove the specification of a system that can be used to learn ship manoeuvring.
+An analysis of the task domain was conducted in order to better understand the actions performed by human operators while manoeuvring a vessel and the conditions under which they are performed. This section describes results of the analysis which in turn drove the specification of a system that can be used to learn ship manoeuvring
 
-A key outcome of the task domain analysis was that an intuitive understanding of vessel handling is required to manually manoeuvre a vessel. Different vessels exhibit different handling behavior depending on their propulsion technology, steering controls, and, dynamics of the particular vessel owing to its design. These factors have a combined effect on the handling behavior of the vessel - unique to that vessel-type. Besides, vessels also differ in their response to various weather conditions. Gaining a high level of intuitive understanding of the vessel’s motion dynamics comes with extensive practice. It follows then that a training system for maneuvering should enable maneuvering practice on real vessels in real operational conditions.
+A key outcome of the task domain analysis was that an intuitive understanding of vessel handling is required to manually manoeuvre a vessel. Different vessels exhibit different handling behaviour depending on their propulsion technology, steering controls, and, dynamics of the particular vessel owing to its design. These factors have a combined effect on the handling behaviour of the vessel - unique to that vessel-type. Besides, vessels also differ in their response to various weather conditions. Gaining a high level of intuitive understanding of the vessel’s motion dynamics comes with extensive practice. It follows then that a training system for manoeuvring should enable manoeuvring practice on real vessels in real operational conditions.
 
-A clear view of the target object around which the vessel is being maneuvered provides direct visual feedback of the target’s position relative to the vessel. By looking out the bridge windows, the operator can immediately learn about progress of the maneuvering operation. Using this information, the operator can make adjustments to the vessel's movement as required. When maneuvering large vessels, besides the person at the helm, another person usually aids the operation. Standing outside the bridge of the vessel, this person keeps a lookout for the position of the ship, and conveys it to bridge personnel. He also keeps a lookout for traffic and other objects in the vicinity such as navigational aids.
+A clear view of the target object around which the vessel is being manoeuvred provides direct visual feedback of the target’s position relative to the vessel. By looking out the bridge windows, the operator can immediately learn about progress of the manoeuvring operation. Using this information, the operator can make adjustments to the vessel's movement as required. When manoeuvring large vessels, besides the person at the helm, another person usually aids the operation. Standing outside the bridge of the vessel, this person keeps a lookout for the position of the ship, and conveys it to bridge personnel. He also keeps a lookout for traffic and other objects in the vicinity such as navigational aids.
 
-Figure \ref{fig:nidpcertification} shows the certification process required to be a qualified dynamic positioning operator. One starts with a classroom-based induction course that provides basic knowledge of the principles and practical use of DP. After such a course, the trainee is expected to be familiar with the components of a DP system, concept of redundancy that separate different classes of DP systems, its modes of operation and limitations. Thereafter the trainee goes on to acquire watchkeeping experience onboard real vessels with DP. This watchkeeping exercise takes place for a relatively short period of time where the trainee is familiarised with DP equipments onboard the vessel and gets to witness operations. This is followed by a simulator-based course where the trainee gets practical experience operating DP systems at shore-based simulation centers. 
+Figure \ref{fig:nidpcertification} shows the certification process required to be a qualified dynamic positioning operator. One starts with a classroom-based induction course that provides basic knowledge of the principles and practical use of DP. After such a course, the trainee is expected to be familiar with the components of a DP system, concept of redundancy that separate different classes of DP systems, its modes of operation and limitations. Thereafter the trainee goes on to acquire watch-keeping experience on-board real vessels with DP. This watch-keeping exercise takes place for a relatively short period of time where the trainee is familiarised with DP equipments on-board the vessel and gets to witness operations. This is followed by a simulator-based course where the trainee gets practical experience operating DP systems at shore-based simulation centres 
 
 \begin{figure}
 	\centering
@@ -140,6 +140,30 @@ Figure \ref{fig:nidpcertification} shows the certification process required to b
 	\caption{Flowchart of nautical institute Dynamic positioning certification scheme}
 	\label{fig:nidpcertification}
 \end{figure} 
+
+
+\paragraph{Comparison of training methods}
+Currently training takes place on simulators blah blah.
+\begin{table}[linewidth]
+	\centering
+	\caption{Comparison of training methods}
+	\label{my-label}
+	\begin{tabular}{@{}p{4.5cm}|P{2.0cm}|P{2.2cm}|P{2.0cm}@{}}
+		\toprule
+		\multicolumn{1}{c|}{ } & \multicolumn{1}{P{2.2cm}|}{\textbf{Simulator training}} & \multicolumn{1}{P{2.2cm}|}{\textbf{MR on-board training}} & \multicolumn{1}{P{2.2cm}}{\textbf{On-the-job training}} \\ 
+		\midrule
+		Practice on real vessel                         & \xmark                            & \cmark                                        & \cmark                                        \\
+		Practice in various real weather conditions     & \xmark                            & \cmark                                        & \cmark                                        \\
+		Perform training repetitions in same conditions & \cmark                            & \xmark                                        & \xmark                                        \\
+		Scope for standardized competency assessment    & \cmark                            & \cmark                                        & \xmark                                        \\
+		Scope for gradation of learning outcomes   		& \cmark                            & \cmark                                        & \xmark                                        \\
+		Close range ship handling training              & \cmark                            & \cmark                                        & \xmark                                        \\
+		Scope for introduction of learning framework    & \cmark                            & \cmark                                        & \xmark                                        \\
+		Risk of collision with other vessels            & \xmark                            & \cmark                                   		& \cmark                                        \\
+		Suitable for learning level                     & All                               & All		                               & Advanced       \\
+		\bottomrule                         
+	\end{tabular}
+\end{table}
 
 \section{Human Factors Knowledge}
 \label{sec:humanfactors}
@@ -173,19 +197,19 @@ An important choice in the design of a new human-computer interface is the techn
 
 Computers had a significant impact on the maritime industry. Where naval architecture was traditionally a craft with little scientific information to back designs, modern computers enabled computing power to be leveraged to predict performance. Modern ship designs make use of tools that have been developed to assess static and dynamic stability, water resistance, for hull development and structural analysis. 
 
-Among other uses, maritime industry found use for computers as devices that could be used for the simulation of movements of vessels on sea. In a gaming-like use case, computers are used to run ship simulation software for educational purposes. These programs can be used to control virtual ships in virtual marine environments. Some setups involve actual bridge equipment to input commands to the program, making the experience more realistic. An array of monitors are used for display. Backed by computer graphics and models of sea, vessel and other objects, the simulation software is supposed to create the perception of being inside a real vessel. It is now standard practice to undergo training using simulators in the maritime industry. Figure \ref{fig:vstepdpsim} shows the setup of a typical dynamic positioning simulator. 
+Among other uses, maritime industry found use for computers as devices that could be used for the simulation of movements of vessels on sea. In a gaming-like use case, computers are used to run ship simulation software for educational purposes. These programs can be used to control virtual ships in virtual marine environments. Some set-ups involve actual bridge equipment to input commands to the program, making the experience more realistic. An array of monitors are used for display. Backed by computer graphics and models of sea, vessel and other objects, the simulation software is supposed to create the perception of being inside a real vessel. It is now standard practice to undergo training using simulators in the maritime industry. Figure \ref{fig:vstepdpsim} shows the set-up of a typical dynamic positioning simulator. 
 
 
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{vstepdpsim2}
-	\caption{Setup of a dynamic positioning simulator by VSTEP B.V.}
+	\caption{Set-up of a dynamic positioning simulator by VSTEP B.V.}
 	\label{fig:vstepdpsim}
 \end{figure}
 
 
 \subsection{Augmented Reality Display}
-This section is about display technology needed to create augmented reality applications. It briefly describes different display technology options for creating the visual perception that is part of augmented reality. Three types of mixed reality displays are considered, namely, optical see-through, video see-through head-mounted displays and, spatial augmented reality. Having been conceived in the 1980s, in military, and medical visualization context, these options for mixed reality displays were first cataloged in a landmark survey paper on augmented reality by Ronald Azuma \parencite{azuma1997survey}. 
+This section is about display technology needed to create augmented reality applications. It briefly describes different display technology options for creating the visual perception that is part of augmented reality. Three types of mixed reality displays are considered, namely, optical see-through, video see-through head-mounted displays and, spatial augmented reality. Having been conceived in the 1980s, in military, and medical visualization context, these options for mixed reality displays were first catalogued in a landmark survey paper on augmented reality by Ronald Azuma \parencite{azuma1997survey}. 
 
 The utility of different categories of augmented reality displays for ship handling training is considered in this research. Optical see-through displays allow an unhindered view of the outside world in theory, whereas in video see-through display the user's view is camera-mediated. Optical see-through HMDs appear to be the most logical choice for AR. It is ideologically consistent with AR in that most of the visual reality is left untouched, only to add bits of information (real/virtual) as necessary. Spatial augmented reality is another option for AR, but the lack of mobility makes it infeasible in this scenario. It is nevertheless described in brief here for posterity. The following sections describe each of the display technologies in turn before comparing optical and video see-through HMDs. 
 
@@ -217,9 +241,9 @@ Driven by interest from the gaming community, and virtual reality applications i
 
 Spatial augmented reality (SAR) refers to the concept of augmenting real-world spaces (with digital media) without the use of special devices such head-mounted display. Being an AR technology, implementations of SAR must adhere to the basic requirements of augmented reality listed in earlier section \ref{sec:augreal}. Alongside HMDs, it forms another paradigm for the creation of mixed reality content. SAR offers unique benefits over HMDs such as obviating the need for users to wear special devices and possibly high resolution, wide field of view displays integrated into natural environments. Large field of view and higher resolution provides a stronger feeling of presence \parencite{lantz1996future}, allowing for better immersion and easier eye accommodation\footnote{refer to section \ref{sec:photorealism} for a discussion on photorealism}. On the downside, it suffers from setbacks such requiring setting up of expensive custom-made display configurations that require more space and hardware than standardized HMDs.
 %ca 
-The lack of standardized solutions and the need to set up special hardware tailored to individual ships makes SAR an impractical solution for the creation of AR onboard ships for maneuvering training purposes. A portable technological solution that enables mobility between vessels is desired. This allows for training to be conducted on various different vessels with minimal time and effort involved in setting up the augmented environment. Using mobile AR devices such as HMDs enables trainees to bring their own AR devices onboard and vessels do not need to be docked for purposes of setting up the AR environment. Nevertheless, the concept is described in brief here for completeness. A detailed treatment of the topic of spatial augmented reality can be found in \cite{bimber2005spatial}.
+The lack of standardized solutions and the need to set up special hardware tailored to individual ships makes SAR an impractical solution for the creation of AR on-board ships for manoeuvring training purposes. A portable technological solution that enables mobility between vessels is desired. This allows for training to be conducted on various different vessels with minimal time and effort involved in setting up the augmented environment. Using mobile AR devices such as HMDs enables trainees to bring their own AR devices on-board and vessels do not need to be docked for purposes of setting up the AR environment. Nevertheless, the concept is described in brief here for completeness. A detailed treatment of the topic of spatial augmented reality can be found in \cite{bimber2005spatial}.
 
-Figure \ref{fig:monitorseethrough} shows a concept of monitor-based spatial augmented reality. In this setup, the user experiences mixed reality through one or more monitors placed in front, displaying a combination of virtual and real-world images captured by video camera. This is similar to the CAVE \parencite{cruz1993surround} concept for virtual reality. CAVE (CAVE automatic virtual environment) seeks to immerse the user in a 3D virtual environment created using rear/front facing projectors lighting up projection screens in three dimensions. Although originally designed for virtual reality experience, the concept can be adapted for augmented reality. Advances in projection technology make it possible to have projections on transparent screens \parencite{peterson2006human}. 
+Figure \ref{fig:monitorseethrough} shows a concept of monitor-based spatial augmented reality. In this set-up, the user experiences mixed reality through one or more monitors placed in front, displaying a combination of virtual and real-world images captured by video camera. This is similar to the CAVE \parencite{cruz1993surround} concept for virtual reality. CAVE (CAVE automatic virtual environment) seeks to immerse the user in a 3D virtual environment created using rear/front facing projectors lighting up projection screens in three dimensions. Although originally designed for virtual reality experience, the concept can be adapted for augmented reality. Advances in projection technology make it possible to have projections on transparent screens \parencite{peterson2006human}. 
 
 \begin{figure}
 	\centering
@@ -230,7 +254,7 @@ Figure \ref{fig:monitorseethrough} shows a concept of monitor-based spatial augm
 
 A discussion of display options for AR would be incomplete without spatial augmented reality. As opposed to head-mounted displays, SAR relies on projectors to create the views necessary for the perception of mixed reality. SAR may be just as effective as head-mounted displays in being able to create immersive mixed environments. A study on the use of large projection screen as an alternative to HMDs for virtual environment found no significant difference between the two for spatial cognition tasks \parencite{patrick2000using}. But projector-based display systems are custom solutions that need to be designed for the specific environment in consideration. Ships come in a variety of shapes and sizes, so do their bridge rooms. Setting up MR environments on-board difference vessels would involve considerable effort to tailor the display system for individual ships. Besides, some modification of the ship's bridge room is involved such as placing of projectors at appropriate locations and turning bridge windows into projection screens onto which virtual objects can be projected.
 
-\subsection{Comparison of Head-Mounted Displays}
+\subsection{Head-Mounted Displays}
 This section provides a comparison of optical and video see-through HMDs based on parameters thought to be relevant to this study. For an in-depth review and comparison between these two display types, readers can refer to \cite{rolland1995comparison}.
 
 \begin{enumerate}
@@ -244,23 +268,23 @@ One advantage of VST over OST is that the higher degree of control over display 
  
 \end{enumerate}
 
-\begin{table}[h]
+\begin{table}
 \centering
 \caption{Comparison of see-through head-mounted displays}
 \label{tab:comparehmds}
-\begin{tabular}{@{}p{3.5cm}|P{4cm}|P{4.75cm}@{}}
+\begin{tabular}{@{}p{3.5cm}|P{3.7cm}|P{4.5cm}@{}}
 \toprule
 \multicolumn{1}{P{3.5cm}|}{} & 
-\multicolumn{1}{P{4cm}|}{\textbf{Optical}} & 
-\multicolumn{1}{P{4.75cm}}{\textbf{Video}} \\ 
+\multicolumn{1}{P{3.7cm}|}{\textbf{Optical}} & 
+\multicolumn{1}{P{4.5cm}}{\textbf{Video}} \\ 
 \midrule
-Peripheral field of view (horizontal)      & 180 degrees                                                            & 110 degrees \\
+Peripheral FOV (horizontal)      & 180 degrees                                                            & 110 degrees \\
 \hline
 Time lag - real world view                & 0ms                                                                    & \textgreater 16ms                                                                                              \\ 
 \hline
-Digital display field of view (horizontal) & 20-40 degrees                                                          & \textgreater 90 degrees                                                                                        \\
+Digital display FOV (horizontal) & 20-40 degrees                                                          & \textgreater 90 degrees                                                                                        \\
 \hline
-Quality - real world view                 & Largely undistorted                                                    & Camera and display dependent                                                                                   \\
+Real world view                 & Largely undistorted                                                    & Camera and display dependent                                                                                   \\
 \hline
 Simplicity                                 & Process one stream  (virtual images)                            & Process two streams (camera feed \& virtual)                                                         \\
 \hline
@@ -269,7 +293,7 @@ Simplicity                                 & Process one stream  (virtual images
 
 Resolution                                 & Partially display dependent                                            & Fully Camera and display dependent                                                                             \\
 \hline
-Focus and contrast                         & Hard to blend virtual object into real scene                           & Less severe contrast issues (limited by camera's dynamic response )                                       \\
+Focus and contrast                         & Hard to blend virtual object into real scene                           & Lesser contrast issues (limited by camera's dynamic response )                                       \\
 \hline
 Occlusion                                  & Challenging to achieve full occlusion									& Occlusion is possible due to full control over displayed content \\ \bottomrule 
 \end{tabular}
@@ -277,44 +301,44 @@ Occlusion                                  & Challenging to achieve full occlusi
 
 %The display technologies considered so far have been applicable for creation of mixed reality for individual users. These systems do not scale easily to groups of users needing to experience the same mixed reality. For example, in the mixed reality ship handling training method that is being conceived in this project, it is required that at least two people experience the same scenario, i.e. the trainee and a trainer (experienced ship handler). Apart from the trainee who needs to view the virtual object/s for training purposes, the trainer also needs to see the same in order to evaluate trainee performance. Collaborative design such as for architecture and modeling is another use case multiple users needing to experience the same mixed reality. 
 
-%\subsubsection{Photorealism}
-%\label{sec:photorealism}
-%
-%\begin{table}[h]
-%\centering
-%\caption{Levels of photorealism}
-%\label{tab:trainingoptions}
-%\begin{tabular}{@{}P{3cm}|C{10cm}@{}}
-%\toprule
-%\multicolumn{1}{P{3cm}|}{\textbf{Classification}} & \multicolumn{1}{C{10cm}}{\textbf{Reasoning}} \\ 
-%\hline
-%High & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,partopsep=0pt,align=left,itemsep=0.05cm]
-%\item Presentation of occlusion, a basic depth cue, is necessary to induce sense of depth in the augmented scene
-%\item Wide field of view is required to create illusion of large object being nearby.	
-%\item  Virtual object is the main focus in the scene and, inconsistency in 3D view of augmented reality can hamper task performance from visual fatigue due to accomodation-vergence conflict.
-%\end{enumerate}
-%\vspace{-\baselineskip}\\
-%\hline
-%Medium & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,partopsep=0pt,align=left,itemsep=0.05cm]
-%\item Occlusion is useful to induce depth in the scene, but some amount transparency can be tolerated.
-%\item  Lack of wide field of view does not affect task performance. 
-%\item  Inconsistency in 3D view does not easily amount to visual fatigue as virtual object is not the user's main object of focus in the augmented scene.
-%\end{enumerate}
-%\vspace{-\baselineskip}\\
-%\hline
-%Low & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,partopsep=0pt,align=left,itemsep=0.05cm]
-%\item Depth cues in the scene are not necessary for purposes of the training.
-%\item Wide field of view is not required for effective task performance.
-%\item Inconsistency in 3D view does not easily amount to visual fatigue as virtual object is not the user's main object of focus in the augmented scene
-%\end{enumerate}
-%\vspace{-\baselineskip}\\
-%\bottomrule
-%\end{tabular}
-%\end{table}
+\subsubsection{Photorealism}
+\label{sec:photorealism}
+
+\begin{table}
+\centering
+\caption{Levels of photorealism}
+\label{tab:trainingoptions}
+\begin{tabular}{@{}P{3cm}|P{10cm}@{}}
+\toprule
+\multicolumn{1}{P{3cm}|}{\textbf{Classification}} & \multicolumn{1}{P{10cm}}{\textbf{Reasoning}} \\ 
+\hline
+High & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,partopsep=0pt,align=left,itemsep=0.05cm]
+\item Presentation of occlusion, a basic depth cue, is necessary to induce sense of depth in the augmented scene
+\item Wide field of view is required to create illusion of large object being nearby.	
+\item  Virtual object is the main focus in the scene. Inconsistency in 3D view of augmented reality can hamper task performance from visual fatigue due to accomodation-vergence conflict.
+\end{enumerate}
+\vspace{-\baselineskip}\\
+\hline
+Medium & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,partopsep=0pt,align=left,itemsep=0.05cm]
+\item Occlusion is useful to induce depth in the scene, but some amount transparency can be tolerated.
+\item  Lack of wide field of view does not affect task performance. 
+\item  Inconsistency in 3D view does not easily amount to visual fatigue as virtual object is not the user's main object of focus in the augmented scene.
+\end{enumerate}
+\vspace{-\baselineskip}\\
+\hline
+Low & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,partopsep=0pt,align=left,itemsep=0.05cm]
+\item Depth cues in the scene are not necessary for purposes of the training.
+\item Wide field of view is not required for effective task performance.
+\item Inconsistency in 3D view does not easily amount to visual fatigue as virtual object is not the user's main object of focus in the augmented scene
+\end{enumerate}
+\vspace{-\baselineskip}\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \subsection{Ship Instrument Augmentation}
 
-Mixed reality displays described in the previous section form a part of enabling technologies for the mixed reality ship maneuvering training conceptualized in this research. HMDs for instance can help create visual perception of an offshore oil platform standing on the open sea. In other training scenarios they may be used to display tracks/lanes for navigational tracking or virtual ships on collision course/sailing side-by-side etc. Different artifacts may be displayed depending on training objectives and the perceptions that need to be created. Ships over the years though have evolved to be technically complex machines. The bridge room of a modern age vessel houses multiple instruments tracking different aspects of its reality. Therefore, the design of a mixed reality environment on-board a modern seafaring vessel should consider how virtual objects interact with various instruments in the bridge room to accurately correspond with the reality that is being visually perceived.  
+Mixed reality displays described in the previous section form a part of enabling technologies for the mixed reality ship manoeuvring training conceptualized in this research. HMDs for instance can help create visual perception of an offshore oil platform standing on the open sea. In other training scenarios they may be used to display tracks/lanes for navigational tracking or virtual ships on collision course/sailing side-by-side etc. Different artefacts may be displayed depending on training objectives and the perceptions that need to be created. Ships over the years though have evolved to be technically complex machines. The bridge room of a modern age vessel houses multiple instruments tracking different aspects of its reality. Therefore, the design of a mixed reality environment on-board a modern seafaring vessel should consider how virtual objects interact with various instruments in the bridge room to accurately correspond with the reality that is being visually perceived.  
 %
 %\subsubsection{Bridge Instrumentation}
 %
@@ -322,9 +346,9 @@ Mixed reality displays described in the previous section form a part of enabling
 \subsection{Tracking Requirements}
 Tracking is a vital requirement for augmented reality as already stated in section \ref{sec:augreal}. An AR system needs vision capability in order to track viewer’s position and register objects in his field of view. Specifically, it is of interest to track user's head position and gaze direction so that virtual objects can be registered in the appropriate location. Tracking systems usually comprise of camera/s that are used to sense real-world space. Cameras produce the raw data necessary for computer vision systems.   
 
-It is common for tracking systems to work on the infrared light spectrum even though the concept is also viable on the visible spectrum. Two main options are available for construction of tracking systems. They differ based on the positioning of the camera relative to the viewer. In broad terms, inside-out tracking systems are designed such that camera is placed on the viewer and it tracks the environment as a viewer moves around in it. Whereas in outside-in tracking, a stationary camera that is placed away from the viewer (but in sight and, without occlusion) tracks the viewer’s movement using markers placed on the viewer themselves. 
+It is common for tracking systems to work on the infra-red light spectrum even though the concept is also viable on the visible spectrum. Two main options are available for construction of tracking systems. They differ based on the positioning of the camera relative to the viewer. In broad terms, inside-out tracking systems are designed such that camera is placed on the viewer and it tracks the environment as a viewer moves around in it. Whereas in outside-in tracking, a stationary camera that is placed away from the viewer (but in sight and, without occlusion) tracks the viewer’s movement using markers placed on the viewer themselves. 
 
-The two types are described below along with their implications for the onboard training scenario. For a detailed discussion of tracking methods, readers are referred to \cite{zhou2008trends}. According to \cite{zhou2008trends}, tracking, being a core enabling technology for AR, is an unsolved problem with many "fertile" areas of research.
+The two types are described below along with their implications for the on-board training scenario. For a detailed discussion of tracking methods, readers are referred to \cite{zhou2008trends}. According to \cite{zhou2008trends}, tracking, being a core enabling technology for AR, is an unsolved problem with many "fertile" areas of research.
 
 \subsubsection{Inside-out Tracking}
 Inside-out tracking refers to systems in which the camera that tracks positions is located in the same physical location as the device/viewer being tracked (head mounted display for example) so the camera moves along with the tracked object. With the camera mounted on the object that is being tracked, the system tracks the world around it from the vantage point of the tracked object. Changes in location/orientation of the tracked object can be detected from the camera’s changing perspective of the outside world.
@@ -332,7 +356,7 @@ Inside-out tracking refers to systems in which the camera that tracks positions 
 \paragraph{Fiducial Markers}
 A straightforward implementation of this idea would process images from video stream captured by the camera to locate objects in the world space and register virtual objects among them. However, interpreting live camera feed is a computationally expensive operation due to the difficult computations involved in processing images on the fly. A popular refinement of this solution is to place so called fiducial markers in the environment being tracked. Figure \ref{fig:eiffel_marker} shows a typical marker that can be used for marker-based tracking. With visible markers (to the camera) in the tracked space, the complexity of image processing computations is reduced. The tracking system is then aware of the type of images to look for and make decisions accordingly. Moreover, marker images are usually black-and-white so that the camera input can be converted to B\&W, significantly simplifying image processing computations.
 
-\begin{figure}
+\begin{figure}[linewidth]
 	\centering
 	\includegraphics{eiffel_marker}
 	\caption{}
@@ -342,6 +366,6 @@ A straightforward implementation of this idea would process images from video st
 \subsubsection{Outside-in Tracking}
 Outside-in tracking systems are those in which a stationary camera placed away from the viewer in the tracking environment tracks the viewer. Changes in viewers position are tracked using markers placed on them. Unlike inside-out tracking systems, tracking range with this method of tracking is not limited by fiducial markers in the environment. Outside-in tracking is considered to be more accurate at tracking position than inside-out tracking systems \parencite{klein2006visual}.
 
-A disadvantage with this system is that since the camera is at a different physical location than the system that generates the virtual images, tracking data is not directly available on the AR system itself. Then data has to be sent to the system from a separate device that does the tracking. Data can be sent wirelessly or via a wired connection. A wired connection impedes free movement in the environment but it is also the faster and more reliable method of data transfer. Data might also be sent wirelessly, allowing for more ease of movement. But it comes at the cost of latency and reliability issues in data transfer. 
+A disadvantage with this system is that since the camera is at a different physical location than the system that generates the virtual images, tracking data is not directly available on the AR system itself. Then data has to be sent to the system from a separate device that does the tracking. Data can be sent by a wireless or wired connection. A wired connection impedes free movement in the environment but it is also the faster and more reliable method of data transfer. Data might also be sent wireless which allows for ease of movement. But it comes at the cost of latency and reliability issues in data transfer. 
 
-Besides latency in obtaining tracking information on the AR headset, another disadvantage of this tracking system is that it is susceptible to noise in the form of ambient infrared light. This is a constraint on the system with the implication being that lighting in the tracked space will have to be carefully controlled to prevent the system from being affected by noise.
+Besides latency in obtaining tracking information on the AR headset, another disadvantage of this tracking system is that it is susceptible to noise in the form of ambient infra-red light. This is a constraint on the system with the implication being that lighting in the tracked space will have to be carefully controlled to prevent the system from being affected by noise.
