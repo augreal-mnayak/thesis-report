@@ -9,7 +9,7 @@ The first section is an introduction to ship handling in general, including a sp
 
 
 \section{Ship Handling}
-
+\label{sec:shiphandling}
 Given the varied environments in which ships are handled, a distinction is made between vessel handling in restricted spaces as opposed to in open seas with vast empty space. Manoeuvring typically refers to ship handling in confined spaces, at low speeds; requiring accuracy and precision in movement. Navigation in contrast, takes place in open seas with more room for movement making it a relatively easy task compared to manoeuvring Besides, a ship usually moves in straight lines while navigating the open seas with the objective to reach destination in the most efficient manner. Fewer changes in direction occur over time, there is lesser need to steer in comparison with manoeuvring scenarios. 
 
 Automation has been seeping into the marine industry over the years. It assists human operators to accomplish vessel handling tasks with functions such as autopilot for navigation and dynamic positioning for manoeuvring The underlying idea is to counter water resistance to movement using the ship's propellers and thrusters, while also accounting for environmental forces such as wind, waves and current measured using sensors on board. Current generation autopilots do a satisfactory job of navigating ships in open seas. Manoeuvring on the other hand continues to be a specialized human job even though a good degree of automation support exists.
@@ -95,11 +95,11 @@ Most DP systems are offered with several modes of operation. They differ in the 
 %	\label{fig:praxisdp}
 %\end{figure}
 
-\begin{enumerate}
+\begin{enumerate}[noitemsep]
 
 \item \textbf{Joystick}: Operator can control vessel position and heading manually using a joystick. 
 \item \textbf{Auto heading}: In this mode, the vessel automatically maintains a pre-set heading. 
-\item \textbf{Auto position}: Maintain both the vessel's position and heading automatically. 
+\item \textbf{Auto position}: Maintain vessel's position and heading both automatically. 
 \item \textbf{Follow target}: Enables the vessel to follow a moving target. 
 \item \textbf{Autopilot}: In this mode, the vessel steers automatically to follow a predefined course of movement. 
 
@@ -143,11 +143,12 @@ Figure \ref{fig:nidpcertification} shows the certification process required to b
 
 
 \paragraph{Comparison of training methods}
-Currently training takes place on simulators blah blah.
+Table \ref{tab:comparetrainingmethods} presents a comparison of simulator-based training, mixed reality on-board training and practice-based or on-the-job learning. 
+
 \begin{table}[linewidth]
 	\centering
 	\caption{Comparison of training methods}
-	\label{my-label}
+	\label{tab:comparetrainingmethods}
 	\begin{tabular}{@{}p{4.5cm}|P{2.0cm}|P{2.2cm}|P{2.0cm}@{}}
 		\toprule
 		\multicolumn{1}{c|}{ } & \multicolumn{1}{P{2.2cm}|}{\textbf{Simulator training}} & \multicolumn{1}{P{2.2cm}|}{\textbf{MR on-board training}} & \multicolumn{1}{P{2.2cm}}{\textbf{On-the-job training}} \\ 
@@ -301,40 +302,6 @@ Occlusion                                  & Challenging to achieve full occlusi
 
 %The display technologies considered so far have been applicable for creation of mixed reality for individual users. These systems do not scale easily to groups of users needing to experience the same mixed reality. For example, in the mixed reality ship handling training method that is being conceived in this project, it is required that at least two people experience the same scenario, i.e. the trainee and a trainer (experienced ship handler). Apart from the trainee who needs to view the virtual object/s for training purposes, the trainer also needs to see the same in order to evaluate trainee performance. Collaborative design such as for architecture and modeling is another use case multiple users needing to experience the same mixed reality. 
 
-\subsubsection{Photorealism}
-\label{sec:photorealism}
-
-\begin{table}
-\centering
-\caption{Levels of photorealism}
-\label{tab:trainingoptions}
-\begin{tabular}{@{}P{3cm}|P{10cm}@{}}
-\toprule
-\multicolumn{1}{P{3cm}|}{\textbf{Classification}} & \multicolumn{1}{P{10cm}}{\textbf{Reasoning}} \\ 
-\hline
-High & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,partopsep=0pt,align=left,itemsep=0.05cm]
-\item Presentation of occlusion, a basic depth cue, is necessary to induce sense of depth in the augmented scene
-\item Wide field of view is required to create illusion of large object being nearby.	
-\item  Virtual object is the main focus in the scene. Inconsistency in 3D view of augmented reality can hamper task performance from visual fatigue due to accomodation-vergence conflict.
-\end{enumerate}
-\vspace{-\baselineskip}\\
-\hline
-Medium & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,partopsep=0pt,align=left,itemsep=0.05cm]
-\item Occlusion is useful to induce depth in the scene, but some amount transparency can be tolerated.
-\item  Lack of wide field of view does not affect task performance. 
-\item  Inconsistency in 3D view does not easily amount to visual fatigue as virtual object is not the user's main object of focus in the augmented scene.
-\end{enumerate}
-\vspace{-\baselineskip}\\
-\hline
-Low & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,partopsep=0pt,align=left,itemsep=0.05cm]
-\item Depth cues in the scene are not necessary for purposes of the training.
-\item Wide field of view is not required for effective task performance.
-\item Inconsistency in 3D view does not easily amount to visual fatigue as virtual object is not the user's main object of focus in the augmented scene
-\end{enumerate}
-\vspace{-\baselineskip}\\
-\bottomrule
-\end{tabular}
-\end{table}
 
 \subsection{Ship Instrument Augmentation}
 

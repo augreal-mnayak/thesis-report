@@ -1,19 +1,17 @@
 \chapter{Evaluation}
 \section{Artefact}	
-A prototype was developed to evaluate the effectiveness of augmented reality as a ship maneuvering training aid. It is composed of various hardware devices which work together to meet one of the three defining aspects of augmented reality listed in section <<insert section number>>. The prototype was composed of the following hardware components:
+A prototype was developed to evaluate the effectiveness of augmented reality as a ship maneuvering training aid. It is composed of various hardware devices which work together to meet one of the three defining aspects of augmented reality listed in section \ref{sec:augreal}. The prototype was composed of the following hardware components:
 Epson Moverio BT-200 Augmented Reality Smart Glasses
 TrackIR 5 Motion Tracking Input Device
 Desktop PC with WiFi capability 
+ 
+Outside-in tracking was chosen as the method of tracking for this scenario. This method of tracking allows for the creation of a tracking system with minimal changes to the environment in which the tracking takes place as there is no need to place fiducial markers. It is required to have a clear view from the bridge of the vessel for safety reasons. Markers obscure external view since they will have to be placed on the window of the bridge in order register a virtual object in that region of space.
 
-Outside-in tracking was chosen as the tracking method in this project since placing of markers on the surface of the area being tracked was considered undesirable for this scenario. It is required to have a clear view from the bridge of the vessel for safety reasons. Markers obscure external view since they will have to be placed on the window of the bridge in order register a virtual object in that region of space.
-
-
-Outside-in tracking was chosen as the method of tracking for this scenario. This method of tracking allows for the creation of a tracking system with minimal changes to the environment in which the tracking takes place as there is no need to place fiducial markers. 
-
-A proprietary head-tracking system called TrackIR was used. TrackIR is a commercial head tracking device that is designed for use as an input device that controls the camera in computer games. The setup involves an infrared camera that tracks markers in the form of three infrared reflectors mounted on the user’s head using a cap for example. The camera is capable of emitting infrared light which is reflected back by the reflectors. Proprietary software provided by TrackIR processes changes in the light field as indicated by sensors of the webcam. It informs of user’s head position with 6 degrees of freedom of movement in near real time (9ms). 
-
-
-However, a tradeoff of this system of tracking is that head tracking data needed to be transmitted from the PC to which the tracking webcam is connected, to the smart glasses on which the actual rendering happens. Besides latency in obtaining head position information on the AR headset, another disadvantage of this tracking system is that it is susceptible to noise in the form of ambient infrared light. It was observed during user trials of the prototype that the system would report erroneous head positions when operated in an environment with large amount of sunlight. The proprietary software provides an interface that allows setting a threshold at which to filter out IR light. This helps filter out ambient noise to an extent, but reduces responsiveness of the tracking system at the same time. It was observed that the system was best operated in dark environments with low ambient IR light.
+%
+%A proprietary head-tracking system called TrackIR was used. TrackIR is a commercial head tracking device that is designed for use as an input device that controls the camera in computer games. The setup involves an infrared camera that tracks markers in the form of three infrared reflectors mounted on the user’s head using a cap for example. The camera is capable of emitting infrared light which is reflected back by the reflectors. Proprietary software provided by TrackIR processes changes in the light field as indicated by sensors of the webcam. It informs of user’s head position with 6 degrees of freedom of movement in near real time (9ms). 
+%
+%
+%However, a tradeoff of this system of tracking is that head tracking data needed to be transmitted from the PC to which the tracking webcam is connected, to the smart glasses on which the actual rendering happens. Besides latency in obtaining head position information on the AR headset, another disadvantage of this tracking system is that it is susceptible to noise in the form of ambient infrared light. It was observed during user trials of the prototype that the system would report erroneous head positions when operated in an environment with large amount of sunlight. The proprietary software provides an interface that allows setting a threshold at which to filter out IR light. This helps filter out ambient noise to an extent, but reduces responsiveness of the tracking system at the same time. It was observed that the system was best operated in dark environments with low ambient IR light.
 
 \begin{figure}[linewidth]
 	\centering
@@ -29,10 +27,10 @@ However, a tradeoff of this system of tracking is that head tracking data needed
 	\label{fig:eiffel_marker}
 \end{figure}
 
-The display and tracking system described above come together to meet requirements for augmented reality mentioned in section <<insert section number>>. The objective of this research was to test feasibility of learning ship maneuvering in AR. It follows that the ideal environment for testing such a system is on-board the bridge room of a real vessel. The ship would have all the legitimate controls necessary to manually manoeuvre it. Further, the ship would have to be positioned in the open sea with enough empty space around so that maneuvering can be practised freely. 
-
-
-Even though onboard a real vessel forms the ideal test setup for the AR training described here, it was disregarded in favour of a ship simulator. Version 2 of Nautis, the ship simulator produced by VSTEP B.V. provided the visual environment in which the system was tested. Apart from the visual environment brought up by Nautis, VSTEP also has hardware controllers setup to mimic a real vessel. This setup refer figure works together to provide the simulation environment that approximates a real vessel.
+%The display and tracking system described above come together to meet requirements for augmented reality mentioned in section <<insert section number>>. The objective of this research was to test feasibility of learning ship maneuvering in AR. It follows that the ideal environment for testing such a system is on-board the bridge room of a real vessel. The ship would have all the legitimate controls necessary to manually manoeuvre it. Further, the ship would have to be positioned in the open sea with enough empty space around so that maneuvering can be practised freely. 
+%
+%
+%Even though onboard a real vessel forms the ideal test setup for the AR training described here, it was disregarded in favour of a ship simulator. Version 2 of Nautis, the ship simulator produced by VSTEP B.V. provided the visual environment in which the system was tested. Apart from the visual environment brought up by Nautis, VSTEP also has hardware controllers setup to mimic a real vessel. This setup refer figure works together to provide the simulation environment that approximates a real vessel.
 
 \subsection{Evaluation Method}
 
@@ -42,33 +40,33 @@ It is assumed that the skill of depth perception and judging relative motion of 
 Position keeping is chosen as the exercise against which maneuvering performance is measured in this experiment. The task of the subject in this manoeuvre is to keep a vessel stationary for a certain period of time. It is to be performed in the absence of aid from motion reference units, so that no automated computer assistance is available in performing the exercise. This will ensure that subject has to rely on their depth perception skills and ability to finely control vessel movements to keep in stationary in the face of wind and current that continuously affect the position of the vessel. 
 
 
-Various objects can act as target objects for maneuvering training in the marine environment. They can be static objects in the form of natural landscape, man-made objects like offshore oil platforms, windmills, lighthouses, harbours, ports, buoys etc., or mobile objects like other seafaring vessels. As a vessel maneuvering training program, the moving object in this experiment will be a seafaring vessel. 
-
-
-The entire experiment consisted of 2 parts. One part was the maneuvering task itself wherein ship maneuvering performance of subjects in 3 different conditions would be compared. Basically the objective was to perform a ship maneuvering task in augmented reality environment under varying weather conditions. Specifically, participants were required to keep the vessel stationary using its controls, while weather changes would continuously move it out of position.
-
-
-
-Group of 24 people of varied maneuvering skills were test subjects
-The objective of the experiment is to keep a vessel stationary in varying weather conditions.
-They engage in position keeping in three different test conditions
-The experiment was intended to be performed onboard real vessels with actual physical targets.
-The actual experiment setup used maritime simulators produced by VSTEP. refer figure.
-Version 2.14 of Nautis, the maritime simulator from VSTEP was used together with the vessel Waalshe Steur for all of the exercises.
-Nautis is an STCW, IMCA, IMO standards compliant maritime simulator software used for training by the military and civilian maritime industry.
-The vessel is set in the atlantic ocean with weather conditions varying over time.
-The advantage of performing the experiment using the simulator was that it allowed for precise control of weather changes.
-
-
-The amount of change that would be affected to wind and current over time was calibrated initially by trial and error with two people of different maneuvering skill levels
-Data from the trials were used to create exercises of 2 different difficulty levels - beginner and expert. 
-Test subjects would be assigned to one of the two difficulty levels based on their maneuvering skill level prior to the actual experiment.
-Their maneuvering skills were gauged using a simple maneuvering task. (refer figure)
-In the test of maneuvering skills, the subject is to manoeuvre from one point to another, some 1000 meters away from starting position, demarcated by an oil platform and visible green marker in front refer figure.
-The task takes place in the presence of worsening weather conditions.
-An experienced maneuverer would reach the target in under 4 minutes.
-Being able to successfully reach the target within a duration of 5 minutes would classify a test subject as ‘expert’ and ‘beginner’ otherwise.
-It is to be performed in the absence of any motion reference units.
-Subjects have an oil platform as visual reference for the task.  
-The task is to keep a vessel stationary for a period of 3 minutes
+%Various objects can act as target objects for maneuvering training in the marine environment. They can be static objects in the form of natural landscape, man-made objects like offshore oil platforms, windmills, lighthouses, harbours, ports, buoys etc., or mobile objects like other seafaring vessels. As a vessel maneuvering training program, the moving object in this experiment will be a seafaring vessel. 
+%
+%
+%The entire experiment consisted of 2 parts. One part was the maneuvering task itself wherein ship maneuvering performance of subjects in 3 different conditions would be compared. Basically the objective was to perform a ship maneuvering task in augmented reality environment under varying weather conditions. Specifically, participants were required to keep the vessel stationary using its controls, while weather changes would continuously move it out of position.
+%
+%
+%
+%Group of 24 people of varied maneuvering skills were test subjects
+%The objective of the experiment is to keep a vessel stationary in varying weather conditions.
+%They engage in position keeping in three different test conditions
+%The experiment was intended to be performed onboard real vessels with actual physical targets.
+%The actual experiment setup used maritime simulators produced by VSTEP. refer figure.
+%Version 2.14 of Nautis, the maritime simulator from VSTEP was used together with the vessel Waalshe Steur for all of the exercises.
+%Nautis is an STCW, IMCA, IMO standards compliant maritime simulator software used for training by the military and civilian maritime industry.
+%The vessel is set in the atlantic ocean with weather conditions varying over time.
+%The advantage of performing the experiment using the simulator was that it allowed for precise control of weather changes.
+%
+%
+%The amount of change that would be affected to wind and current over time was calibrated initially by trial and error with two people of different maneuvering skill levels
+%Data from the trials were used to create exercises of 2 different difficulty levels - beginner and expert. 
+%Test subjects would be assigned to one of the two difficulty levels based on their maneuvering skill level prior to the actual experiment.
+%Their maneuvering skills were gauged using a simple maneuvering task. (refer figure)
+%In the test of maneuvering skills, the subject is to manoeuvre from one point to another, some 1000 meters away from starting position, demarcated by an oil platform and visible green marker in front refer figure.
+%The task takes place in the presence of worsening weather conditions.
+%An experienced maneuverer would reach the target in under 4 minutes.
+%Being able to successfully reach the target within a duration of 5 minutes would classify a test subject as ‘expert’ and ‘beginner’ otherwise.
+%It is to be performed in the absence of any motion reference units.
+%Subjects have an oil platform as visual reference for the task.  
+%The task is to keep a vessel stationary for a period of 3 minutes
 
