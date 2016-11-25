@@ -1,155 +1,12 @@
 \chapter{Design Specification}
-This research is a study of the viability of leveraging augmented reality technology for simulation-based training purposes in the maritime sector. A working prototype was envisaged in order to access the user experience of such a system. This chapter consists of the design solution that was devised to the ship handling training problem outlined in the previous chapter. 
+\label{chap:specification}
+This research is a study of the viability of leveraging augmented reality technology for simulation-based training purposes in the maritime sector. A working prototype was envisaged in order to access the user experience of such a system. This chapter contains the devised design solution - specifications that would be used to develop a prototype for evaluation. 
 
-Development of the actual prototype was based on a few functional requirements thought to be essential to the system (section \ref{sec:functionalreqs}). SCE method prescribes that functional requirements be linked to objectives of the system. An evaluation of the prototype is then conducted to test it's ability to meet desired objectives. Evaluation hinges on claims that are made regarding the system. Claims in this context are the hypothesis that are tested during system evaluation(section \ref{sec:claims}). First, section \ref{sec:trainingcomparison} makes a comparison of three types of on-board training differing in their expected outcomes in terms of learning. A basic use-case flow is outlined along with alternate steps of system use in section \ref{sec:usecase}.
+%to the ship handling training problem outlined in the previous chapter. 
+
+Development of the actual prototype was based on a few functional requirements thought to be essential to the system (section \ref{sec:functionalreqs}). SCE method prescribes that functional requirements be linked to objectives of the system. The prototype that is developed is then tested for it's ability to meet desired objectives. Evaluation hinges on claims that are made regarding the system (section \ref{sec:claims}). Claims in this context are hypothesis whose truth value is determined during system evaluation. First, section \ref{sec:trainingcomparison} makes a comparison of three types of on-board training differing in their expected learning outcomes. Section \ref{sec:usecase} lists a basic use-case flow and alternate steps of system use.
 
 
-\subsection{Design Challenge}
-\label{sec:designchallenge}
-Systems that involve human-computer interaction(HCI) are intended to be aids of human activity. However, system designs are as much constraints on the solution space as they are solutions themselves to the problem at hand \parencite{carroll2000five}. In other words, a proposal for a certain way of tackling a problem ties further reflections of it's effectiveness to specifics of the design. How then does a research in HCI deal with this unavoidable conflict?
-
-Further, it is often advised that designs must be open-for-change. A popular saying in software design practice is \textit{requirements always change.} But, changing requirements are not conducive to testing. 
-%It may turn out that results are no longer be relevant due to requirement change.
- 
-% "Thinking impedes progress in doing, and doing obstructs thinking."
-One way to counter this problem is to list a few different desirable objectives for the system in question. A broader look into the problem space allows for insight on requirements of a minimum viable product. It can be posited that such an insight enables the design of a system that is more accommodating of changes in requirement. By exploring many different objectives and designing to meet their basic underlying functional requirements, the chances that future requirement changes are related to those already explored is increased and so is the validity of evaluations. 
-
-\section{On-board Training Possibilities}
-\label{sec:trainingcomparison}
-An analysis of various scenarios for simulation-based on-board training resulted in three areas of training - manoeuvre training, navigation training and, emergency response training. They are characterised by their different learning objectives. These categories were conceived after a research of ship crew training options using augmented reality. The analysis was conducted by surveying research papers in this context and interviewing industry experts on the subject. 
-
-%Following is a brief description of each. 
-As mentioned previously, a prototype was envisaged to evaluate the feasibility of the training method explored in this study. Prototype artefacts inevitably embody a particular design choice; a choice rife with challenges that are faced by systems design described earlier in section \ref{sec:designchallenge}. This study deals with the challenge by explicitly outlining available design choices. Consequently, one is chosen for prototyping and evaluation. Results can then be viewed in light of the general context. Following is an overview of each of the training options. Table \ref{tab:trainingoptions} presents a comparison of the three categories.
-
-\subsection{Manoeuvre Training}
-
-Ship manoeuvring and its growing importance in the maritime industry has been elucidated in section \ref{sec:shiphandling}. To reinstate, manoeuvring is the skilled task of handling a vessel with precise control in navigationally challenging scenarios, for example in close quarters of large man-made artefacts. The skill involved is noteworthy as the operator faces two-fold demands of timely accurate assessment of evolving weather conditions, their effect on the vessel as well as effecting its movement using ship controls. Currently, experienced seafarers are entrusted with manoeuvring responsibility. It is a reflection the importance of practice-based learning where ship handling skill is concerned.  
-
-It is expected that this type of training would require a high degree of photorealism \footnote{refer page \pageref{sec:photorealism} for categorization of photorealism}. Manoeuvring typically occurs in physical proximity of large man-made or natural objects. At close range, the human eye sees objects in greater detail than when they're farther away. One implication then is that the device used for augmented reality display would have to render virtual images at a high resolution. Another implication is that these scenarios will place high demand on registration accuracy since inconsistencies in positioning of virtual objects' will be more noticeable at close range owing to the nature of human vision.
-
-A manoeuvre training scenario was chosen for prototyping and evaluation despite the relatively high level of photorealism thought to be required for the concept to be workable. Reasoning for this choice two-fold. Firstly, an evaluation (user-testing a prototype) in this scenario would bring to light shortcomings, if any, of state-of-the-art consumer grade AR devices for their ability to render high quality 3D graphics necessary to create believable augmented reality training scenarios. Secondly, manoeuvring scenarios in offshore supply context do not require a large number of virtual objects in the scene. Position keeping for example, is an exercise where the vessel is to be kept stationary with reference to a particular offshore construction. Position keeping training scenario then allowed for rapid prototyping with low time-investment on developing the virtual aspect of the augmented reality.
-
-\begin{table}
-	\centering
-	\caption{Comparison of on-board training options}
-	\label{tab:trainingoptions}
-	\begin{tabular}{@{}p{2.2cm}|p{3.3cm}|p{3.2cm}|p{3.3cm}|@{}}
-		\toprule
-		\multicolumn{1}{c|}{ } & \multicolumn{1}{P{3cm}|}{\textbf{Manoeuvre Training}} & \multicolumn{1}{P{3cm}|}{\textbf{Navigation Training}} & \multicolumn{1}{P{2.5cm}|}{\textbf{Emergency Response}} \\ 
-		\hline
-		Learning Objectives & Vessel handling in navigationally challenging situations & Long-distance maritime navigation & Emergency response procedures and teamwork skills \\
-		\hline
-		Scenarios &
-		\vspace{-2mm} \begin{itemize}[leftmargin=*,topsep=0pt,align=left,itemsep=0.25pt,after=]
-			\renewcommand{\labelitemi}{\scalebox{.9}{\tiny\listsymb}}
-			\item Position keeping  
-			\item In-place turning
-			\item Berthing  
-		\end{itemize}
-		\vspace{-2mm}
-		&\vspace{-2mm} \begin{itemize}[leftmargin=*,topsep=0pt,align=left,itemsep=0.25pt,after=]
-			\renewcommand{\labelitemi}{\scalebox{.9}{\tiny\listsymb}}
-			\item Path planning 
-			\item Navigate port entrances
-		\end{itemize} 
-		\vspace{-2mm}
-		& \vspace{-2mm} \begin{itemize}[leftmargin=*,topsep=0pt,align=left,itemsep=0.25pt,after=]
-			\renewcommand{\labelitemi}{\scalebox{.9}{\tiny\listsymb}}
-			\item Fire in engine room 
-			\item Water flooding in lower deck
-			\item Man over-board
-		\end{itemize} \vspace{-2mm}\\
-		\hline
-		Competences Gained & \vspace{-2mm}\begin{itemize}[leftmargin=*,topsep=0pt,align=left,itemsep=0.25pt,after=]
-			\renewcommand{\labelitemi}{\scalebox{.9}{\tiny\listsymb}}
-			\item Bridge equipment operation
-			\item Vessel movement intuition
-			\item Depth estimation  
-		\end{itemize}
-		& \vspace{-2mm}\begin{itemize}[leftmargin=*,topsep=0pt,align=left,itemsep=0.25pt,after=]
-			\renewcommand{\labelitemi}{\scalebox{.9}{\tiny\listsymb}} 
-			\item Route planning
-			\item Identify, use maritime navigation aids
-		\end{itemize}
-		& \vspace{-2mm}\begin{itemize}[leftmargin=*,topsep=0pt,align=left,itemsep=0.25pt,after=]
-			\renewcommand{\labelitemi}{\scalebox{.9}{\tiny\listsymb}}
-			\item Emergency severity assessment 
-			\item Teamwork, communication 
-		\end{itemize}  \\
-		\hline
-		Equipments Required & Radar, ARPA, ECDIS, Fiducial markers in bridge & Radar, ECDIS, ARPA, AIS, Markers in bridge & Fiducial markers in engine room, deck, etc. \\
-		\hline
-		Crew Requirement & 
-		\vspace{-2mm} \begin{itemize}[leftmargin=*,topsep=0pt,align=left,itemsep=0.25pt,after=]
-			\renewcommand{\labelitemi}{\scalebox{.9}{\tiny\listsymb}}
-			\item Trainee 
-			\item Instructor
-			\item Officer of the watch
-		\end{itemize}
-		&\vspace{-2mm} \begin{itemize}[leftmargin=*,topsep=0pt,align=left,itemsep=0.25pt,after=]
-			\renewcommand{\labelitemi}{\scalebox{.9}{\tiny\listsymb}}
-			\item Trainee 
-			\item Instructor
-			\item Officer of the watch
-		\end{itemize}
-		& \vspace{-2mm} \begin{itemize}[leftmargin=*,topsep=0pt,align=left,itemsep=0.25pt,after=]
-			\renewcommand{\labelitemi}{\scalebox{.9}{\tiny\listsymb}}
-			\item Full crew / part of crew located at emergency site
-		\end{itemize} \\
-		%Trainee, OOW, Captain/Instructor & Trainee, OOW, Captain/Instructor & Full crew / part of crew located at emergency site \\ 
-		\hline
-		Photorealism required & High & Medium & Medium \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-\subsection{Navigation Training}
-
-Scenarios involving activities aimed to learn the tasks of navigation are described in this section. Navigation here refers to ship handling from the time it is unberthed and, along the journey to the destination. This includes path planning, following the plan to avoid collision in adherence to COLREGS \footnote{The International Regulations for Preventing Collisions at Sea}, maintaining watch along the path, etc. 
-
-There is scope for augmented reality to be used as a training aid in these scenarios. Buoy for instance is a floating device that serves as a navigational aid, and can form part/s of a virtual environment set up for training purposes. More elaborate scenarios maybe envisioned such as visualization of landscape in the vicinity and harbour ports with in and outbound traffic. Simulated scenarios of this nature should also be visualised on ship bridge instruments. In order to be consistent with the augmented reality of sailing by an island for example, the radar should reflect said island in its display system. 
-
-\subsection{Emergency Response Training}
-
-Emergency response training in general aims to arm trainees with the knowledge and alertness required to encounter hazardous situations in real life. This type of training has potential for use of augmented reality to create the illusion of dangerous situations. Examples of it on ships can be fire in the engine room or water flooding in the ship's deck. It is posited that these are situations that lend themselves well to simulation-based training. Further, interviews with industry experts revealed that emergency response training on-board could be improved by simulations. During training exercises, visual evidence of a hazard can be a more powerful motivator compared to vocal signals to the same effect. The idiom \textit{seeing is believing} perhaps then applies.
-
-Compared to manoeuvre training, emergency response places looser demands on the augmented reality system. Fires and floods for instance are shapeless and for training purposes their exact form is of less importance than their very existence. Also in such situations, attention of rescue workers is not always entirely on the cause of hazard itself. There is a focus on rescuing crew members and emerging from the situation safely. 
-
-\subsubsection{Photorealism}
-\label{sec:photorealism}
-
-Photorealism in this context refers to the quality of visualisation of objects in the simulation. At high levels of photorealism, virtual objects are visible with a high level of detail, blend seamlessly into the surroundings - appropriately occluding objects behind it and, are of proper focus and contrast, with the end result being a realistic visualisation whose virtual aspects are hard to distinguish from the real. 
-
-Stereoscopic displays are plagued by problems from accomodation-vergence conflict \parencite{hoffman2008vergence}. For purposes of this study, levels of photorealism are grouped into three distinct categories. The extent to which accommodation-vergence conflict affects a scenario is one of the attributes on which the classification has been made. Another attribute is occlusion, an essential depth cue that can be important in manoeuvring scenarios for instance. Table \ref{tab:trainingoptions} is a listing of the three categories.
-
-\begin{table}
-	\centering
-	\caption{Levels of photorealism}
-	\label{tab:trainingoptions}
-	\begin{tabular}{@{}P{3cm}|P{10cm}@{}}
-		\toprule
-		\multicolumn{1}{P{3cm}|}{\textbf{Classification}} & \multicolumn{1}{P{10cm}}{\textbf{Reasoning}} \\ 
-		\hline
-		High & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,align=left,itemsep=0.25pt,after=]
-			\item Presentation of occlusion, a basic depth cue, is necessary to induce sense of depth in the augmented scene
-			\item Wide field of view is required to create illusion of large object being nearby.	
-			\item  Virtual object is the main focus in the scene. Inconsistency in 3D view of augmented reality can hamper task performance from visual fatigue due to accomodation-vergence conflict.
-		\end{enumerate}\\
-		\hline
-		Medium & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,align=left,itemsep=0.25pt,after=]
-			\item Occlusion is useful to induce depth in the scene, but some amount transparency can be tolerated.
-			\item  Lack of wide field of view does not affect task performance. 
-			\item  Inconsistency in 3D view does not easily amount to visual fatigue as virtual object is not the user's main object of focus in the augmented scene.
-		\end{enumerate}\\
-		\hline
-		Low & \vspace{-2mm} \begin{enumerate}[leftmargin=*,topsep=0pt,align=left,itemsep=0.25pt,after=]
-			\item Depth cues in the scene are not necessary for purposes of the training.
-			\item Wide field of view is not required for effective task performance.
-			\item Inconsistency in 3D view does not easily amount to visual fatigue as virtual object is not the user's main object of focus in the augmented scene
-		\end{enumerate}\\
-		\bottomrule
-	\end{tabular}
-\end{table}
 
 
 \section{Design Scenario}
@@ -158,7 +15,7 @@ Stereoscopic displays are plagued by problems from accomodation-vergence conflic
 
 Michiel, 25 years old, received the dynamic positioning (DP) certificate a short time ago. He has just taken up his first job as a dynamic positioning operator (DPO) on-board VOS BASE - a medium-size platform supply vessel. Fitted with Class 1 DP system, the vessel has been rented by Royal Dutch Shell to supply cargo to offshore oil platforms off the Dutch coast. Michiel is joined on the deck by captain Willem and chief mate Steve, both experienced seafarers capable of handling the ship as well as its DP equipment.
 
-He lacks manual vessel manoeuvring skills. Though familiar with bridge equipment, he has little experience using it on an actual vessel. Manoeuvring a large vessel in close range of offshore platforms causes him anxiety. He feels unprepared for an emergency such as failure of one of the DP system's components effectively rendering it unusable. Should this situation arise during a load/unload operation, an operator needs to maintain the vessel's position and heading manually - at least until it is safe to stop the operation. Following this, the vessel will be steered away outside the 500m safety zone of the oil rig. With a dysfunctional DP system, either joystick manoeuvring or manual vessel handling will have to be engaged; both of which he is not adequately trained for. 
+He lacks manual vessel manoeuvring skills. Though familiar with bridge equipment, he has little experience using it on an actual vessel. Manoeuvring a large vessel in close range of offshore platforms causes him anxiety. He feels unprepared for an emergency such as failure of one of the DP system's components effectively rendering it unusable. Should this situation arise during a load/unload operation, an operator needs to maintain the vessel's position and heading manually - at least until its safe to stop the operation. Following this, the vessel will be steered away outside the 500m safety zone of the oil rig. With a dysfunctional DP system, either joystick manoeuvring or manual vessel handling will have to be engaged; both of which he is not adequately trained for. 
 
 \section{Functional Requirements}
 \label{sec:functionalreqs}
@@ -182,8 +39,8 @@ The system shall be able to:
 	\item Registering the virtual object in a fixed space creates a convincing feeling of presence.
 %	required for depth perception, so that size can be compared with that of the surroundings. 
 	\item Generating view-specific projections of virtual object based on user position is essential to leverage parallax effect which provides depth cues.
-	\item Maneuvering instructions, help automate the task of coaching. 
-	\item Different types of maneuvering exercises makes the system useful to a wide range of users of varying levels of maneuvering skills.
+	\item Manoeuvring instructions, help automate the task of coaching. 
+	\item Different types of manoeuvring exercises makes the system useful to a wide range of users of varying levels of manoeuvring skills.
 \end{enumerate}
 
 \section{Use Case}
@@ -195,8 +52,8 @@ The system shall be able to:
 			\item [Actors:] DP Operator, AugMan, Captain/Instructor.
 			\item [Circumstance:] DP operator is idle on an offshore supply vessel.
 			\item [Precondition:] Vessel is not undertaking any operation.
-			\item [Post condition:] DP operator has improved maneuvering skills.
-			\item [Method:] Practice maneuvering in augmented reality.
+			\item [Post condition:] DP operator has improved manoeuvring skills.
+			\item [Method:] Practice manoeuvring in augmented reality.
 		\end{description}
 }}
 
@@ -205,31 +62,31 @@ The system shall be able to:
 \subsection{Basic Flow}
 \begin{enumerate}[itemsep=.01em]
 	\item Operator wears AR device and starts the application. 
-	\item AugMan presents a list maneuvering exercises and asks user to choose.
+	\item AugMan presents a list manoeuvring exercises and asks user to choose.
 	\item Operator chooses an exercise and orients himself (including head position) in the direction in which the virtual object/augmented environment should appear.
 	\item Operator indicates he is ready to start the exercise.
 	\item AugMan brings up the augmented reality environment and asks the operator to set vessel controls to neutral position before starting the exercise.
 	\item After making sure that the vessel controls are in neutral position, operator starts the exercise. 
 	\item AugMan receives position changes from the vessel and renders visuals of the virtual environment accordingly.
-	\item Operator practices maneuvering the vessel in the virtual environment using visuals from the AR device as reference.
-	\item AugMan provides a review and feedback of the maneuvering performance.
+	\item Operator practices manoeuvring the vessel in the virtual environment using visuals from the AR device as reference.
+	\item AugMan provides a review and feedback of the manoeuvring performance at the end of the exercise.
 \end{enumerate}
 
 \subsubsection{Alternative steps (Beginner Level)}
 
-Application provides direction and maneuvering hints throughout the exercise.
+Application provides direction and manoeuvring hints throughout the exercise.
 
 \begin{enumerate}[noitemsep]
 	\item Operator wears Ar device and starts the application. 
-	\item AugMan presents a list of \textbf{low-difficulty maneuvering exercises} available and asks user to choose.
+	\item AugMan presents a list of \textbf{low-difficulty manoeuvring exercises} available and asks user to choose.
 	\item Operator chooses an exercise and orients himself (including head position) in the direction in which the virtual object/augmented environment should appear.
 	\item Operator indicates he is ready to start the exercise.
 	\item AugMan brings up the augmented reality environment and asks the operator to set vessel controls to neutral position before starting the exercise.
 	\item After ensuring that the vessel controls are in neutral position, operator starts the exercise. 
 	\item AugMan receives position changes from the vessel and renders visuals of the virtual environment accordingly.
-	\item Operator practices maneuvering the vessel in the virtual environment using visuals from the AR device as reference.
-	\item Application provides \textbf{helpful hints} for maneuvering such as the directional pointers and controls to be engaged \textbf{throughout the exercise}.
-	\item AugMan provides a review and feedback of the maneuvering performance.
+	\item Operator practices manoeuvring the vessel in the virtual environment using visuals from the AR device as reference.
+	\item Application provides \textbf{helpful hints} for manoeuvring such as the directional pointers and controls to be engaged \textbf{throughout the exercise}.
+	\item AugMan provides a review and feedback of the manoeuvring performance at the end of the exercise.
 \end{enumerate}
 
 \subsubsection{Alternative steps (Intermediate Level)}
@@ -246,7 +103,7 @@ Application provides maneuvering hints during the exercise on request by user.
 	\item AugMan receives position changes from the vessel and renders visuals of the virtual environment accordingly.
 	\item Operator practices maneuvering the vessel in the virtual environment using visuals from the AR device as reference.
 	\item Application provides \textbf{helpful hints} for maneuvering such as the controls to be engaged during the exercise \textbf{on need basis}.
-	\item AugMan provides a review and feedback of the maneuvering performance.
+	\item AugMan provides a review and feedback of the maneuvering performance at the end of the exercise.
 \end{enumerate}
 
 
@@ -264,7 +121,7 @@ Application does not provide maneuvering hints during the exercise.
 	\item AugMan receives position changes from the vessel and renders visuals of the virtual environment accordingly.
 	\item Operator practices maneuvering the vessel in the virtual environment using visuals from the AR device as reference.
 	\item Application provides \textbf{no maneuvering hints} during the exercise.
-	\item AugMan provides a review and feedback of the maneuvering performance.
+	\item AugMan provides a review and feedback of the maneuvering performance at the end of the exercise.
 \end{enumerate}
 
 \subsection{Ontology}

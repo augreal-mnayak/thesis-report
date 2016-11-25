@@ -1,8 +1,8 @@
-\documentclass[12pt,oneside]{book}
+\documentclass[11pt,oneside]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{csquotes}
-\usepackage[style=authoryear,backend=bibtex]{biblatex}
+\usepackage[style=authoryear,citestyle=authoryear,backend=bibtex]{biblatex}
 \addbibresource{./ref/ref.bib}
 \usepackage{graphicx}
 \usepackage{subcaption}
@@ -16,6 +16,9 @@
 \usepackage{booktabs}
 \usepackage{setspace}
 \usepackage{makeidx}
+\usepackage{libertine}
+%\setkomafont{description}
+\setlist[description]{font=\normalfont\normalcolor\sffamily}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -26,6 +29,16 @@
 	linkcolor=black,
 	linktoc=all,     %set to all if you want both sections and subsections linked
 }
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
+%\defbibenvironment{bibliography}
+%{\enumerate
+%	{}
+%	{\setlength{\leftmargin}{\bibhang}%
+%		\setlength{\itemindent}{-\leftmargin}%
+%		\setlength{\itemsep}{\bibitemsep}%
+%		\setlength{\parsep}{\bibparsep}}}
+%{\endenumerate}
+%{\item}
 \usepackage{array}
 \usepackage{url}
 \usepackage{fancyhdr}
@@ -34,14 +47,14 @@
 
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
-
 \reversemarginpar
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{2}
-\renewcommand{\arraystretch}{1.3} 
+\renewcommand{\arraystretch}{1.2} 
 \onehalfspacing
 
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\arraybackslash}p{#1}}
 
 \newcommand{\cmark}{\ding{51}}
 \newcommand{\xmark}{\ding{55}}
@@ -51,7 +64,7 @@
 \lhead{}
 \rhead{\nouppercase{\leftmark}}
 
-\title{Mixed Reality Ship Handling Training Method}
+\title{Augmented Reality Ship Handling Training Method}
 \author{Mahesh Nayak}
 
 \makeindex
@@ -69,8 +82,9 @@
 \input{foundation}
 \input{specification}
 \input{evaluation}
-
+\input{appendix}
 \backmatter
+\addcontentsline{toc}{chapter}{References}
 \printbibliography
 
 \end{document}
